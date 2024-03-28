@@ -154,7 +154,7 @@ The lab environment contains one (1) Linux VM, named **Workstation**.
   - Docker 24.0.7
   - Git 2.39.3
   - Maven 3.9.5 
-  - Java IBM Semeru 17
+  - IBM Semeru 17 Open Edition JDK
 
 1.  Access the lab environment from your web browser. 
      
