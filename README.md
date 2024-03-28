@@ -381,23 +381,7 @@ In this section of the lab, you will download and install the mono2micro command
         ./mono2micro -h
 
     command output: 
-
-        Mono2Micro: AI driven transformation of Java monoliths to microservices for WebSphere Liberty
-        Usage: mono2micro [-hvz] COMMAND
-        -h, --help      Display help information
-        -v, --version   Display Mono2Micro component versions
-        -z, --verbose   Enable verbose mode
-        Commands:
-        install     Install Mono2Micro components and images
-        analyze     Analyze the monolith application source code or binary code
-        instrument  Analyze and instrument the monolith application source code (deprecated)
-        usecase     Capture use case context (names and times) while running them on the instrumented application
-        recommend   Run the AI engine on collected application data to recommend partitions for the monolith
-        workbench   Run the workbench UI to view and customize the AI recommended partitions
-        refine      Regenerate reports and partition information files using custom partitions
-        transform   Generate starter code to implement and run the partitions as microservices
-
-        Run 'mono2micro COMMAND --help' for more information on a command.
+    <kbd>![](./images/media/mono2micro-help.png)</kbd>
 
 
 4.  Check the install possibilities by using the help option within
