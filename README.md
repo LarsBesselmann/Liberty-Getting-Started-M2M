@@ -2138,8 +2138,7 @@ In this section, you will run the microservices based application,  using the va
  
     <kbd>![](./images/media/image108.png)</kbd>
  
-    <kbd>![](./images/media/image17.png)</kbd>
-
+ 
 3.  Click the Browser back button <kbd>![](./images/media/image109.png)</kbd> to return to the DefaultApplication main HTML page
 
     <kbd>![](./images/media/image110.png)</kbd>
