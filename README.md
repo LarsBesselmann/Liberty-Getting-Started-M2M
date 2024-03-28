@@ -1244,7 +1244,7 @@ Lets get started\!
     <kbd>![](./images/media/image71.png)</kbd>
 
 2.  From the same folder as the **custom-graph.json** file, modify the permissions for **config.ini** so that we have write permissions. 
-    When prompted, enter the sudo password for techzone user: IBMDem0s!
+    When prompted, enter the sudo password for techzone user: **IBMDem0s!**
 
         sudo chmod 777 ./config.ini
 
