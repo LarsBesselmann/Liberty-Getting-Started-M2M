@@ -396,64 +396,8 @@ In this section of the lab, you will download and install the mono2micro command
 5.  Run the Mono2Micro **install command,** selecting Docker as the container engine:
 
         ./mono2micro install -c docker
-
-6.  You need to choose option **`1`** for trial to proceed:
-
-    <table>
-    <tbody>
-    <tr class="odd">
-    <td><p>License not accepted. Choose from the following options:</p>
-    <p>1. IBM Mono2Micro 23.0.06 trial (L-KNAV-6S5BZN)</p>
-    <p>2. IBM WebSphere Hybrid Edition 5.1 (L-AMIK-C92MN6)</p>
-    <p>3. IBM WebSphere Application Server for z/OS V9.0.5.15 (L-QJFA-M33W3S)</p>
-    <p>4. IBM WebSphere Application Server for z/OS V8.5.5.23 (L-LRGS-5TV3HE)</p>
-    <p>Select [1/2/3/4]: 1</p></td>
-    </tr>
-    </tbody>
-    </table>
-
-7.  The license will be presented, and you need to accept it. Type **`1`** to proceed:
-
-    |                                                           |
-    | --------------------------------------------------------- |
-    | Do you accept the license? Enter 1 for Yes or 2 for No: 1 |
-
-8.  The **next steps** message will be displayed when the Mono2Micro-CLI
-    is successfully installed:
-
-        License used: IBM Mono2Micro 23.0.06 trial (L-KNAV-6S5BZN)
-        Container engine used: Docker
-        Completed downloading all Mono2Micro images
-
-        ******************************
-
-        Next steps: Analyze your Java application source code with the "mono2micro analyze" or "mono2micro instrument" commands
-
-
-9.  Now Mono2Micro is successfully installed. As a result of the
-    installation, two new files were created under the user home
-    directory. Use the commands below to check the content of the files:
-
-    a. view the license key
-
-        cat ~/.mono2micro_license
-        
-    command output:     
-        
-        accept_license_flag = true
-        license_key = L-KNAV-6S5BZN
-
-    b. view the configuration
-
-        cat ~/.mono2micro_config
-    
-    command output: 
-
-        update_check_last = 2023-06-27
-        license_type = 2
-        container_engine = docker
-        update_check_frequency = 30
-
+    You need to choose option **`1`** to accept the license:
+    <kbd>![](./images/media/mono2micro-install-help.png)</kbd>
 
 
 ## Use Mono2Micro’s code analyzer for collecting data on the monolith application 
