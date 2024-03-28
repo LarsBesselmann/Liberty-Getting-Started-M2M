@@ -560,6 +560,7 @@ You will configure the Liberty server to load the Binary instrumenter (minerva-a
     Create a jvm.options that will be used by Liberty server
 
         cd /home/techzone/Student/m2m-ws-sample/defaultapplication/monolith/DefaultApplication-ear/target
+
         echo '-javaagent:/home/techzone/Student/Mono2Micro-CLI/instrumenter/minerva-agent-1.0.jar=/home/techzone/Student/Mono2Micro-CLI/DefaultApplication-mono2micro/instrumenter-config.json' \
         > liberty/wlp/usr/servers/DefaultApplicationServer/jvm.options
         
@@ -574,6 +575,7 @@ You will configure the Liberty server to load the Binary instrumenter (minerva-a
 2.  Run the scripts below to Start the Liberty server and check that the server is in the running state
 
         liberty/wlp/bin/server start DefaultApplicationServer
+        
         liberty/wlp/bin/server status DefaultApplicationServer
 
     <kbd>![](./images/media/image28.png)</kbd>
