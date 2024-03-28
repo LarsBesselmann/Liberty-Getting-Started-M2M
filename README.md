@@ -663,10 +663,10 @@ running that scenario on the monolith.
 
         ./mono2micro usecase
 
+    <kbd>![mono2micro-usecase-done.png](./images/media/mono2micro-usecase-start.png)</kbd>
+
     Notice that the **use case recorder** is just waiting for you to provide a “**Label**” or name of the test case to run. You will do that in the next step.
 
-        A filename is not specified. Creating a default file: "context_1681760275797.json".
-        Enter <Label> to start recording current context or enter 1 to exit.
 
 2.  Run the **Snoop** test case
 
