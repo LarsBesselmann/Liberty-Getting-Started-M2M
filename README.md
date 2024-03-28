@@ -238,28 +238,22 @@ The lab environment contains one (1) Linux VM, named **Workstation**.
 
 ## 1.1 Introduction to the Default Application used in this lab 
 
-In this lab, you will use Mono2Micro to transform WebSphere Application
-Server’s **Default Application** into microservices.
+In this lab, you will use Mono2Micro to transform WebSphere Application Server’s **Default Application** into microservices.
 
-The Default application contains a web module called
-***DefaultWebApplication*** and an enterprise Java bean (EJB) called
-***Increment***.
+The Default application contains a web module called ***DefaultWebApplication*** and an enterprise Java bean (EJB) called ***Increment***.
 
-The Default Application provides two servlets that are invoked from an
-HTML page in the application
+The Default Application provides two servlets that are invoked from an HTML page in the application
 
   - SnoopServlet
   - HitCount
 
 <kbd>![](./images/media/image16.png)</kbd>
 
-**Snoop servlet** retrieves information about a servlet request. This
-servlet returns the following information:
+**Snoop servlet** retrieves information about a servlet request. This servlet returns the following information:
 
 <kbd>![](./images/media/image17.png)</kbd>
 
-**Hit Count** demonstrates how to increment a counter using a variety of
-methods, including:
+**Hit Count** demonstrates how to increment a counter using a variety of methods, including:
 
   - A servlet instance variable
   - An HTTP session
@@ -267,49 +261,38 @@ methods, including:
 
 <kbd>![](./images/media/image18.png)</kbd>
 
-You can instruct the servlet to execute any of these methods within a
-transaction that you can commit or roll back. If the transaction is
+You can instruct the servlet to execute any of these methods within a transaction that you can commit or roll back. If the transaction is
 committed, the counter is incremented.
 
-The enterprise bean method uses a container-managed persistence
-enterprise bean that persists the counter value to an Apache Derby
-database.
+The enterprise bean method uses a container-managed persistence enterprise bean that persists the counter value to an Apache Derby database.
 
 ## 1.2 Clone the GitHub repository used for this Mono2Micro lab 
 
 The basic steps in this section include:
 
-  - Introduce the structure of the GitHub repository resources used in
-    the lab
+  - Introduce the structure of the GitHub repository resources used in the lab
 
-  - Clone the **GitHub repository** that contains the resources required
-    for the lab
+  - Clone the **GitHub repository** that contains the resources required for the lab
 
-The **GitHub repository** contains all the source code and files needed
-to perform all the steps for using Mono2micro to transform the monolith
+The **GitHub repository** contains all the source code and files needed to perform all the steps for using Mono2micro to transform the monolith
 application used in this lab, to microservices.
 
-Structure of the m2m-ws-sample GitHub repository: (details in the README
-within the GitHub repo):
+Structure of the m2m-ws-sample GitHub repository: (details in the README within the GitHub repo):
 
   - **Monolith source code:** ./defaultapplication/monolith
 
   -  **Monolith application data:** ./defaultapplication/application-data/
 
-  - **Mono2Micro analysis (initial recommendations):**
-./defaultapplication/mono2micro-analysis
+  - **Mono2Micro analysis (initial recommendations):** ./defaultapplication/mono2micro-analysis
 
-  - **Mono2Micro analysis (further customized):**
-./defaultapplication/mono2micro-analysis-custom
+  - **Mono2Micro analysis (further customized):** ./defaultapplication/mono2micro-analysis-custom
 
   - **Deployable Microservices:** ./defaultapplication/microservices
 
-The GitHub repo includes all the artifacts needed to complete this lab
-on your local workstation.
+The GitHub repo includes all the artifacts needed to complete this lab on your local workstation.
 
   - The DefaultApplication Source Code
-  - The newly constructed dockerfiles to build and run the microservices
-    in containers
+  - The newly constructed dockerfiles to build and run the microservices in containers
   - The updated POM files that have been reduced to contain only the
     resources needed for the individual microservice
 
@@ -327,8 +310,9 @@ on your local workstation.
     
     a.  Open a Terminal window and run the following commands:
 
-        cd /home/ibmdemo
-        
+        mkdir /home/techzone/Student
+        cd /home/techzone/Student
+       
         git clone https://github.com/kpostreich/m2m-ws-sample
 
     <kbd>![](./images/media/image19.png)</kbd>
