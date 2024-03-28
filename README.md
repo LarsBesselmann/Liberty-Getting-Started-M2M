@@ -890,17 +890,7 @@ The **/home/techzone/Student/m2m-ws-sample/defaultapplication/application-data/*
         ls -R /home/techzone/Student/m2m-ws-sample/defaultapplication/application-data
 
     command output: 
-
-        contexts logs     tables
-
-        /home/techzone/Student/m2m-ws-sample/defaultapplication/application-data/contexts:
-        context_1681760275797.json
-
-        /home/techzone/Student/m2m-ws-sample/defaultapplication/application-data/logs:
-        messages.log
-
-        /home/techzone/Student/m2m-ws-sample/defaultapplication/application-data/tables:
-        instrumenter-config.json      recommender-config.properties refTable.json                 symTable.json
+    <kbd>![mono2micro-appdata](./images/media/mono2micro-appdata.png)</kbd>
 
 
 
