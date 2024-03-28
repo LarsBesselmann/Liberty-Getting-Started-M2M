@@ -362,9 +362,6 @@ Mono2Micro has already been installed. Please refer to the appendix if you want 
 1.  Switch to the directory where mono2micro has been installed, then run the Mono2Micro CLI version commands:
 
         cd /home/techzone/Mono2Micro-CLI
-
-
-
         ./mono2micro -v
         
     command output:     
