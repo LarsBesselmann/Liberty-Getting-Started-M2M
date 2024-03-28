@@ -332,35 +332,28 @@ The GitHub repo includes all the artifacts needed to complete this lab on your l
 
 **Objectives**
 
-  - Learn how to use the AI-driven Mono2Micro tools to analyze a Java EE
-    monolith and recommend the different ways it can be partitioned into
+  - Learn how to use the AI-driven Mono2Micro tools to analyze a Java EE monolith and recommend the different ways it can be partitioned into
     partitions
 
-  - Learn how to use Mono2Micro tools to further customize the
-    partitioning recommendations
+  - Learn how to use Mono2Micro tools to further customize the partitioning recommendations
 
 In Part 2 of the lab, you will first install the Mono2Micro tools. Then you will follow the steps illustrated in the image below, that is:
 
-1.  Run Mono2Micro’s **code analyzer** to analyze the Java binary code
-    and produce the analysis files that will be used as input to the
+1.  Run Mono2Micro’s **code analyzer** to analyze the Java binary code and produce the analysis files that will be used as input to the
     Mono2Micro’s AI engine.
 
-2.  Use the **binary instrumenter** to collect the runtime traces while
-    running business use cases, eliminating the need to rebuild and
+2.  Use the **binary instrumenter** to collect the runtime traces while running business use cases, eliminating the need to rebuild and
     redeploy the Java monolithic application.
 
-3.  Use Mono2Micro’s **use case recorder** to gather time stamps and use
-    case data as you run **test cases** against the deployed monolith
+3.  Use Mono2Micro’s **use case recorder** to gather time stamps and use case data as you run **test cases** against the deployed monolith
     application.
 
-4.  Use the **AI engine** to produce the initial partition
-    recommendations.
+4.  Use the **AI engine** to produce the initial partition recommendations.
 
-5.  Use the **workbench UI** to visualize the microservice
-    recommendations and modify the initial recommendations to further
+5.  Use the **workbench UI** to visualize the microservice recommendations and modify the initial recommendations to further
     customize the microservice recommendations.
 
-<kbd>![](./images/media/image7.svg)</kbd>
+![](./images/media/image7.svg)
 
 ## 2.1 Installing Mono2Micro tools
 
