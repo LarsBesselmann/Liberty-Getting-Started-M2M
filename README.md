@@ -575,7 +575,7 @@ You will configure the Liberty server to load the Binary instrumenter (minerva-a
 2.  Run the scripts below to Start the Liberty server and check that the server is in the running state
 
         liberty/wlp/bin/server start DefaultApplicationServer
-        
+
         liberty/wlp/bin/server status DefaultApplicationServer
 
     <kbd>![](./images/media/image28.png)</kbd>
@@ -590,7 +590,10 @@ You will configure the Liberty server to load the Binary instrumenter (minerva-a
     </tbody>
     </table>
 
-3.  Open a Web Browser and launch the DefaultApplication. The main HTML page will be displayed.
+3.   Use the **Activities** Icon to switch to the toolbar, then click the **Firefox** icon to open a browser window.
+    <kbd>![](./images/media/Toolbar_firefox.png)</kbd>
+ 
+    From the web browser, launch the DefaultApplication. The main HTML page will be displayed.
 
         http://localhost:9080
 
