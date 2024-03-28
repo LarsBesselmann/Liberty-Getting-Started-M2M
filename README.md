@@ -683,13 +683,14 @@ running that scenario on the monolith.
     c.  From the Web Browser, click on the **Snoop Servlet** link in the DefaultApplication HTML page. 
 
     <kbd>![](./images/media/image33.png)</kbd>
+    
     Snoop requires basic authentication. If prompted for credentials, enter the following username and password:
 
     > Username: **user1**
     > 
     > Password: **change1me** (that is the number 1 in the password).
     > 
-    <kbd>![](./images/media/image33a.png)</kbd>
+    <kbd>![](./images/media/image33b.png)</kbd>
 
     d.  Run snoop multiple times: Just click the Browsers “Reload Page” <kbd>![](./images/media/image34.png)</kbd> button.
 
