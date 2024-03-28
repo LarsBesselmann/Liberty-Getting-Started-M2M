@@ -419,6 +419,12 @@ Let’s begin with the build of the .ear file and then the static data collectio
 
 1.  Build the original version of the DefaultApplication
 
+    Adjust the sample package to use the default JDK instead of the one rferenced in the Liberty server.xml.
+
+        cd /home/techzone/Student/m2m-ws-sample/defaultapplication/monolith/defaultapplication/monolith/DefaultApplication-ear/src/main/liberty/config
+        mv server.env server.env.sav
+
+
     Change to the directory location of the application code, and run the maven build.
 
         cd /home/techzone/Student/m2m-ws-sample/defaultapplication/monolith
