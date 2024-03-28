@@ -677,6 +677,7 @@ running that scenario on the monolith.
     b. From the **use case recorder**, provide the label named **`snoop`** and press **ENTER**. 
     
     This starts the **use case recorder** stopwatch for the snoop test case.
+    <kbd>![](./images/media/mono2micro-snoop.png)</kbd>
 
         A filename is not specified. Creating a default file: "context_1681760275797.json".
         Enter <Label> to start recording current context or enter 1 to exit.
