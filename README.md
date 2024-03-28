@@ -36,9 +36,9 @@ guidance is available.
 
 | Icon                                               | Purpose             | Explanation                                                                                                                                                |
 | -------------------------------------------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![sign-caution](./images/media/image2.png)         | Important\!         | **This symbol calls attention to a particular step or command. For example, it might alert you to type a command carefully because it is case sensitive.** |
-| ![sign-info](./images/media/image3.png)            | Information         | **This symbol indicates information that might not be necessary to complete a step but is helpful or good to know.**                                       |
-| ![sign-troubleshooting](./images/media/image4.png) | **Troubleshooting** | **This symbol indicates that you can fix a specific problem by completing the associated troubleshooting information.**                                    |
+| <kbd>![sign-caution](./images/media/warn.png)</kbd>         | Important\!         | **This symbol calls attention to a particular step or command. For example, it might alert you to type a command carefully because it is case sensitive.** |
+| <kbd>![sign-info](./images/media/info.png)</kbd>            | Information         | **This symbol indicates information that might not be necessary to complete a step but is helpful or good to know.**                                       |
+| <kbd>![sign-troubleshooting](./images/media/work.png)</kbd> | **Troubleshooting** | **This symbol indicates that you can fix a specific problem by completing the associated troubleshooting information.**                                    |
 
 ## 3. Why Do I need Mono2Micro?
 
@@ -148,7 +148,7 @@ end-to-end process.
 
 |                                         |                                                                                                                                        |
 | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| ![sign-info](./images/media/image3.png) | At this point, do not get bogged down with the details in the diagram. You will explore these details as you progress through the lab. |
+| <kbd>![sign-info](./images/media/info.png)</kbd> | At this point, do not get bogged down with the details in the diagram. You will explore these details as you progress through the lab. |
 
 1.  Use the **code analyzer** to analyze the monolith application
 
@@ -354,7 +354,7 @@ on your local workstation.
 <table>
 <tbody>
 <tr class="odd">
-<td><img src="./images/media/image3.png" style="width:0.65625in;height:0.625in" alt="sign-info" /></td>
+<td><kbd><img src="./images/media/info.png" style="width:0.65625in;height:0.625in" alt="sign-info" /></kbd></td>
 <td><p><strong>TIP: How to Copy / Paste text from the lab guide to the lab environment?</strong></p>
 <p>Refer to the <strong>Appendix</strong> at the end of this lab guide for simple to follow instructions for using copy / paste using the provided lab environment<strong>.</strong></p></td>
 </tr>
@@ -716,7 +716,7 @@ Let’s begin with the build of the .ear file and then the static data collectio
 
     |                                         |                                                                                                                                                                                                                                                                            |
     | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | ![sign-info](./images/media/image3.png) | The code analyzer instrumentation never prints the value of any variables of your application. The purpose of the instrumentation is to record the temporal flows through various methods and constructors of classes, and not the values of any variables during run time |
+    | <kbd>![sign-info](./images/media/info.png)</kbd> | The code analyzer instrumentation never prints the value of any variables of your application. The purpose of the instrumentation is to record the temporal flows through various methods and constructors of classes, and not the values of any variables during run time |
 
     This static analysis therefore gathers a detailed overview of the Java code in the monolith, for use by Mono2Micro’s AI analyzer tool to come  up with recommendations on how to partition the monolith application.
  
@@ -796,7 +796,7 @@ You will configure the Liberty server to load the Binary instrumenter (minerva-a
     <table>
     <tbody>
     <tr class="odd">
-    <td><img src="./images/media/image3.png" style="width:1.74167in;height:0.65833in" alt="sign-info" /></td>
+    <td><kbd><img src="./images/media/info.png" style="width:1.74167in;height:0.65833in" alt="sign-info" /></kbd></td>
     <td><p><strong>Tip:</strong> The Liberty server is in the folder:</p>
     <p>/home/ibmdemo/m2m-ws-sample/defaultapplication/monolith/DefaultApplication-ear/target/liberty/wlp/usr/servers/DefaultApplicationServer</p></td>
     </tr>
@@ -1067,7 +1067,7 @@ generated for the snoop and hit count test cases
     <table>
     <tbody>
     <tr class="odd">
-    <td><img src="./images/media/image4.png" style="width:1.60625in;height:0.60625in" alt="sign-troubleshooting" /></td>
+    <td><kbd><img src="./images/media/work.png" style="width:1.60625in;height:0.60625in" alt="sign-troubleshooting" /></kbd></td>
     <td><p>If the log file does <strong>NOT</strong> contain trace statements for Snoop and Hit count as illustrated below, it is likely that the binary instrumenter or the jvm.options were not correct set up in the Liberty server.</p>
     <p>Do not worry, we have captured a known good log file and context json file that can be used to continue the lab, without having to go back and redo previous steps.</p></td>
     </tr>
@@ -1077,7 +1077,7 @@ generated for the snoop and hit count test cases
     <table>
     <tbody>
     <tr class="odd">
-    <td><img src="./images/media/image2.png" style="width:1.60625in;height:0.60625in" alt="sign-caution" /></td>
+    <td><kbd><img src="./images/media/warn.png" style="width:1.60625in;height:0.60625in" alt="sign-caution" /></kbd></td>
     <td><p><strong>Tip:</strong> It is critical that the server log files DO NOT get overwritten during the execution of the test cases.</p>
     <p>System Administrators configure limits for how much data is logged and kept.</p>
     <p>They do this by configuring a MAX size for the log files, and the MAX number of log files to keep. If or when these maximum thresholds are reached, Liberty will write over the messages.log file, resulting in the timestamps from our test cases to be out of whack.</p>
@@ -1214,7 +1214,7 @@ generate partition recommendations.
 
     |                                         |                                                                                                                                                                                                                                                                                  |
     | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | ![sign-info](./images/media/image3.png) | For the lab, you will reference a saved version of the data collection when running the AI engine. This is just to ensure a known good collection is used for the recommendation generation. (You could also use your own collected data and feed it into the folder structure). |
+    | <kbd>![sign-info](./images/media/info.png)<kbd> | For the lab, you will reference a saved version of the data collection when running the AI engine. This is just to ensure a known good collection is used for the recommendation generation. (You could also use your own collected data and feed it into the folder structure). |
 
     Next. Explore some of the notable files and reports generated by Mono2Micro.
 
@@ -1302,7 +1302,7 @@ generated by loading the **final\_graph.json** in the workbench UI.
 <table>
 <tbody>
 <tr class="odd">
-<td><img src="./images/media/image3.png" style="width:1.65625in;height:0.625in" alt="sign-info" /></td>
+<td><kbd><img src="./images/media/info.png" style="width:1.65625in;height:0.625in" alt="sign-info" /></kbd></td>
 <td><p>The initial partitioning recommendations is a starting point and generated taking into consideration based on the business logic and natural seams that were discovered during the analysis.</p>  
 <p>In the lab, you will slightly customize the partition recommendations to suit our goals.</p>
 <p>This will provide an opportunity to see how easy it is to customize the recommendations to tailor them to exactly suit your desired end state.</p></td>
@@ -1408,7 +1408,7 @@ the Java servlet classes which are referred to by the html file.
 
 |                                            |                                                                                                                                                                                           |
 | ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![sign-caution](./images/media/image2.png) | The important point to note here is that **Java servlets** need to be running on the \***same**\* application server instance that serves up the **html** files referring to the servlets |
+| <kbd>![sign-caution](./images/media/warn.png)</kbd> | The important point to note here is that **Java servlets** need to be running on the \***same**\* application server instance that serves up the **html** files referring to the servlets |
 
 The goal of this lab is to split the Default Application monolith into
 separate microservices such that:
@@ -1770,7 +1770,7 @@ referenced in the code generator command for proper execution:
 <table>
 <tbody>
 <tr class="odd">
-<td><img src="./images/media/image2.png" style="width:1.60625in;height:0.60625in" alt="sign-caution" /></td>
+<td><kbd><img src="./images/media/warn.png" style="width:1.60625in;height:0.60625in" alt="sign-caution" /></kbd></td>
 <td><p>For the lab, you will reference a saved version of the cardinal folder when running the code generator. This is just to ensure a known good dataset is used for the code generation.</p>
 <p>/home/ibmdemo/m2m-ws-sample/defaultapplication/<strong>mono2micro-analysis-custom/cardinal</strong></p>
 <p>If you would rather use the cardinal folder that was generated during the lab, use:</p>
@@ -1864,7 +1864,7 @@ summary and details of the Java source files that were generated.
     <table>
     <tbody>
     <tr class="odd">
-    <td><img src="./images/media/image3.png" style="width:1.74167in;height:0.65833in" alt="sign-info" /></td>
+    <td><kbd><img src="./images/media/info.png" style="width:1.74167in;height:0.65833in" alt="sign-info" /></kbd></td>
     <td><p><strong>Note:</strong> When Mono2Micro identifies a monolith class as a service class in one partition, it generates a proxy class for it in all other partitions that has the same method signatures as the original monolith class.</p>
     <p>Now if these monolith classes happened to have annotations at the class or method level that can make the application server treat the class in a special way (i.e. the @Entity annotation can make a simple java class into a JPA entity with respect to the app server), then Mono2Micro will remove these kinds of Java EE annotations on the proxy class.</p></td>
     </tr>
@@ -1943,7 +1943,7 @@ generated here:
 <table>
 <tbody>
 <tr class="odd">
-<td><img src="./images/media/image2.png" style="width:1.60625in;height:0.60625in" alt="sign-caution" /></td>
+<td><kbd><img src="./images/media/warn.png" style="width:1.60625in;height:0.60625in" alt="sign-caution" /></kbd></td>
 <td><p>For the purpose of this lab, it is not necessary to understand the details of all the code that code generator produces. However, we strongly recommend learning this before using Mono2Micro with a production application. </p>
 <p><strong>APPENDIX A: Examine the Java Code generated by Mono2Micro</strong> provides a detailed look at these generated files.</p></td>
 </tr>
@@ -2207,7 +2207,7 @@ Server in separate Docker containers.
 
 |                                            |                                                                                                                            |
 | ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
-| ![sign-caution](./images/media/image2.png) | **APPENDIX B: Examine the Refactored resources after code generation** provides a detailed look at these refactored files. |
+| <kbd>![sign-caution](./images/media/warn.png)</kbd> | **APPENDIX B: Examine the Refactored resources after code generation** provides a detailed look at these refactored files. |
 
 <br/>
 
@@ -2439,7 +2439,7 @@ transformation process yourself.
 
     |                                         |                                                                                                                                                                              |
     | --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | ![sign-info](./images/media/image3.png) | **Note:** When using a Kubernetes based platform like RedHat OpenShift, the service-to-service communication is automatically handled by the underlying Kubernetes platform. |
+    | <kbd>![sign-info](./images/media/info.png)</kbd> | **Note:** When using a Kubernetes based platform like RedHat OpenShift, the service-to-service communication is automatically handled by the underlying Kubernetes platform. |
 
 3.  Build the **defaultapplication-web** **(front-end)** container
 
@@ -2611,7 +2611,7 @@ In this section, you will run the microservices based application,  using the va
 <table>
 <tbody>
 <tr class="odd">
-<td><img src="./images/media/image3.png" style="width:1.67708in;height:0.63542in" alt="sign-info" /></td>
+<td><kbd><img src="./images/media/info.png" style="width:1.67708in;height:0.63542in" alt="sign-info" /></kbd></td>
 <td><p>When using Mono2Micro for application analysis and microservice recommendations, we chose to separate the WEB UI components into a microservice and place the EJB components that interact with the back-end database into its own microservice.</p>
 <p>This approach provides separation of the front-end from the back-end as a first pass for adopting a microservices architecture for the DefaultApplication.</p>
 <p>This was not the only option, and we understand that further refactoring might be necessary. But this is a good first step to illustrate the capabilities of Mono2Micro.</p></td>
@@ -2655,7 +2655,7 @@ In this section, you will run the microservices based application,  using the va
 <table>
 <tbody>
 <tr class="odd">
-<td><img src="./images/media/image3.png" style="width:0.94167in;height:0.65833in" alt="sign-info" /></td>
+<td><kbd><img src="./images/media/info.png" style="width:0.94167in;height:0.65833in" alt="sign-info" /></kbd></td>
 <td><p><strong>TIP:</strong> The logging level in the Mono2Micro generated code has been set to “INFO” in the source code.</p>
 <p>This means that logging statements will be generated in the server log file for all inter-partition calls.</p>
 <p>In the defaultapp-web partition, the logs will show calling the IncrementAction Rest service running in defaultapp-partition0 (back-end) service</p>
@@ -2982,7 +2982,7 @@ reduced to pull in only applicable server features to each partition.
 <table>
 <tbody>
 <tr class="odd">
-<td><img src="./images/media/image3.png" style="width:1.65625in;height:0.625in" alt="sign-info" /></td>
+<td><kbd><img src="./images/media/info.png" style="width:1.65625in;height:0.625in" alt="sign-info" /></kbd></td>
 <td><p>If the original monolith was running on a traditional WebSphere server, and you wish to run the partitions on Liberty, a server.xml can either be handcrafted, or created with the assistance of IBM’s other migration and modernization tools.</p>
 <p>Of course, this would only be possible if the monolith uses functionality that WebSphere Liberty supports.</p>
 <p>.</p></td>
