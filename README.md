@@ -592,9 +592,8 @@ You will configure the Liberty server to load the Binary instrumenter (minerva-a
 
 3.   Use the **Activities** Icon to switch to the toolbar, then click the **Firefox** icon to open a browser window.
     <kbd>![](./images/media/Toolbar_firefox.png)</kbd>
- 
     From the web browser, launch the DefaultApplication. The main HTML page will be displayed.
-
+    
         http://localhost:9080
 
     Notice the application only has two main features:
