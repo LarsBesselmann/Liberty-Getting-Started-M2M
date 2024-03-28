@@ -1662,7 +1662,7 @@ functionality in each partition.
     a.  The script defines a bunch of variables referencing various directories for copying files.
         Make dure that the workdir is set to /home/techzone/Student/m2m-ws-sample
 
-        <kbd>![mono2micro-set_workdir](./images/media/mono2micro-set_workdir.png)</kbd>
+    <kbd>![mono2micro-set_workdir](./images/media/mono2micro-set_workdir.png)</kbd>
 
     b.   The script uses sudo to change directory permissions to allow write access to the partitions that mono2 micro generated
 
