@@ -760,19 +760,14 @@ running that scenario on the monolith.
 
 ## 2.4 Review the output from the use case recorder and the Liberty Log file based on the test cases
 
-After exiting the **use case recorder**, it produces a **context json
-file** that captures the use case labels and their start/stop times. The
-context json files are generated in the same directory where the
-mono2micro ran.
+After exiting the **use case recorder**, it produces a **context json file** that captures the use case labels and their start/stop times. The
+context json files are generated in the same directory where the mono2micro ran.
 
-This context json file will be used as input to the AI engine in
-Mono2Micro for shaping the recommendations for microservices
-partitioning.
+This context json file will be used as input to the AI engine in Mono2Micro for shaping the recommendations for microservices partitioning.
 
 ## 2.4.1 Review the output from the use case recorder and Liberty log file based on the test cases you executed
 
-Take a quick look at the context file that the use case recorder
-generated for the snoop and hit count test cases
+Take a quick look at the context file that the use case recorder generated for the snoop and hit count test cases
 
 1.  View the context json file.
 
@@ -782,7 +777,7 @@ generated for the snoop and hit count test cases
 
         ls *.json
 
-        cat context*.json
+        cat context*.json;echo
 
     Notice the two test cases were recorded, along wit the start and stop timestamps for each testcase.
  
