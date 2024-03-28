@@ -491,7 +491,7 @@ Let’s begin with the build of the .ear file and then the static data collectio
         -rw-r--r--  1 staff  13721 17 Apr 13:53 symTable.json
  
 
-    The code analyzer creates a directory with a "-mono2micro" extension. The directory contains 3 .json files and 1 .properties file. 
+    The code analyzer creates a directory with a "-mono2micro" extension. The directory contains 3 json files and 1 properties file. 
 
     The files in the **DefaultApplication-mono2micro** directory are:
     - refTable.json
@@ -525,26 +525,19 @@ Let’s begin with the build of the .ear file and then the static data collectio
 
 ## 2.3 Run test cases using the binary instrumenter with the monolith for Runtime data analysis
 
-Now you are ready to proceed to the next phase of data collection from
-the monolith application. This is a crucial phase where both the
-quantity and quality of the data gathered will impact the quality and
-usefulness of the partitioning recommendations from Mono2Micro’s AI
+Now you are ready to proceed to the next phase of data collection from the monolith application. This is a crucial phase where both the
+quantity and quality of the data gathered will impact the quality and usefulness of the partitioning recommendations from Mono2Micro’s AI
 analyzer tool.
 
-The key concept here is to run as much user scenarios as possible in the
-running the binary instrumenter with the monolith application,
+The key concept here is to run as much user scenarios as possible in the running the binary instrumenter with the monolith application,
 exercising as much of the codebase as possible.
 
-These user scenarios (or business use cases if you will), should be
-typical user threads through the application, related to various
-functionality that the application provides. More akin to functional
-verification testcases or larger green thread testcases, and less so
+These user scenarios (or business use cases if you will), should be typical user threads through the application, related to various
+functionality that the application provides. More akin to functional verification testcases or larger green thread testcases, and less so
 unit testcases.
 
-In the DefaultApplication’s case, these scenarios are very simple, which
-is partially why we selected this application for the lab. For real
-applications, your test cases could be quite extensive to achieve
-maximum code coverage in the tests.
+In the DefaultApplication’s case, these scenarios are very simple, which is partially why we selected this application for the lab. For real
+applications, your test cases could be quite extensive to achieve maximum code coverage in the tests.
 
 <span class="underline">Test cases for DefaultApplication</span>
 
@@ -554,8 +547,7 @@ maximum code coverage in the tests.
 
 ## 2.3.1 Configure Liberty to use the binary instrumenter within your application
 
-The test cases (use cases) that you will run must be executed on the
-code base using the binary instrumenter and the files generated in the
+The test cases (use cases) that you will run must be executed on the code base using the binary instrumenter and the files generated in the
 “**DefaultApplication-mono2micro**” directory.
 
 Since we already built the DefaultApplication in the previous section, we can focus on the configuration and deployment of the DefaultApplication in the Liberty Server.
