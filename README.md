@@ -1757,11 +1757,16 @@ partition (microservice) will compile and run on their own Liberty Server in sep
 
     <br/>  
 
-1.  Run the **refactorPartitions.sh** shell script to perform the partition refactoring
+1.  Use the **refactorPartitions.sh** shell script to perform the partition refactoring
+    The script defines a bunch of variables referencing various directories for copying files.
+    Make dure that the workdir is set to /home/techzone/Student/m2m-ws-sample. If not adjust the settings and save the file.
 
         cd /home/techzone/Student/m2m-ws-sample/defaultapplication/scripts
 
-        ./refactorPartitions.sh
+        gedit ./refactorPartitions.sh
+
+    <kbd>![mono2micro-set_workdir2](./images/media/mono2micro-set_workdir2.png)</kbd>
+    
 
         
     a. If prompted for a password, enter: `passw0rd`
