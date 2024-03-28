@@ -19,20 +19,19 @@ the minimal changes to the lab instructions.
   - 3 GB free storage for the Mono2Micro Docker images and containerized
     microservices
 
-  - Docker 17.06 CE or higher, which supports multi-stage builds
+  - Docker 24.0.7 CE or higher, which supports multi-stage builds
 
   - Git CLI (needed to clone the GitHub repo)
 
-  - Java 1.8
+  - Java 17
 
-  - Maven 3.6.3
+  - Maven 3.9.5
 
   - Internet connectivity with access to dockerhub and maven-central
 
   - Understanding of command line for your environment
 
-The following symbols appear in this document at places where additional
-guidance is available.
+The following symbols appear in this document at places where additional guidance is available.
 
 | Icon                                               | Purpose             | Explanation                                                                                                                                                |
 | -------------------------------------------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -42,109 +41,78 @@ guidance is available.
 
 ## 3. Why Do I need Mono2Micro?
 
-One of the best ways to modernize business applications is to refactor
-them into microservices, allowing each microservice to be then
-independently enhanced and scaled, providing agility and improved speed
-of delivery.
+One of the best ways to modernize business applications is to refactor them into microservices, allowing each microservice to be then
+independently enhanced and scaled, providing agility and improved speed of delivery.
 
-IBM Mono2Micro is an AI-based semi-automated toolset that uses novel
-machine learning algorithms and a first-of-its-kind code generation
-technology to assist you in that refactoring journey to full or partial
-microservices, all **without** **rewriting** **the entire Java
+IBM Mono2Micro is an AI-based semi-automated toolset that uses novel machine learning algorithms and a first-of-its-kind code generation
+technology to assist you in that refactoring journey to full or partial microservices, all **without** **rewriting** **the entire Java
 application** and the business logic within.
 
 It analyzes the monolith application in both a static and dynamic fashion, and then **provides recommendations for how the monolith can be partitioned** into groups of classes that can become potential microservices.
 
 Based on the partitioning, Mono2Micro also **generates the microservices foundation code and APIs** which alongside the existing monolith Java classes can be used to implement and deploy running microservices.
 
-![](./images/media/image5.png)
+<kbd>![](./images/media/image5.png)</kbd>
 
 ## 3.1 Getting Started with Mono2Micro
 
-Below is a high-level flow diagram of getting started with Mono2Micro in
-collecting data on an existing monolith application, and then running
-the AI analyzer tool to generate two kinds of recommendations as how to
-partition the application into recommended microservices.
+Below is a high-level flow diagram of getting started with Mono2Micro in collecting data on an existing monolith application, and then running
+the AI analyzer tool to generate two kinds of recommendations as how to partition the application into recommended microservices.
 
-1.  The data is collected from static code analysis, capturing **data
-    (Class) dependencies,** depicted in **\[1\]**.
+1.  The data is collected from static code analysis, capturing **data (Class) dependencies,** depicted in **\[1\]**.
 
-2.  Data is dynamically collected through **runtime trace logs** as the
-    instrumented monolith application is run through various **use case
-    scenarios** to exercise as much of the codebase as possible,
-    depicted in **\[2\]** & **\[3\]**.
+2.  Data is dynamically collected through **runtime trace logs** as the instrumented monolith application is run through various **use case
+    scenarios** to exercise as much of the codebase as possible, depicted in **\[2\]** & **\[3\]**.
 
-Based on all three kinds of data, Mono2Micro generates a ***Natural
-Seams Partitioning*** recommendation that aims to partition and group
-the monolith classes such that there are minimal class containment
-dependencies and entanglements (i.e. classes calling methods outside
+Based on all three kinds of data, Mono2Micro generates a ***Natural Seams Partitioning*** recommendation that aims to partition and group
+the monolith classes such that there are minimal class containment dependencies and entanglements (i.e. classes calling methods outside
 their partitions) between the partitions.
 
-The “Data Dependency Analysis” in \[1\] refers to this kind of
-dependency analysis between the Java classes. In effect, this breaks up
-the monolith along its natural seams with the least amount of
-disruption.
+The “Data Dependency Analysis” in \[1\] refers to this kind of dependency analysis between the Java classes. In effect, this breaks up
+the monolith along its natural seams with the least amount of disruption.
 
-Based on \[2\] and \[3\] alone, and not taking class containment
-dependencies and method call entanglements into account, Mono2Micro also
-generates a ***Business Logic Partitioning*** that might present more
-entanglements and dependencies between partitions, but ultimately
-provides a more useful partitioning of the monolith divided along
-functional and business logic capabilities.
+Based on \[2\] and \[3\] alone, and not taking class containment dependencies and method call entanglements into account, Mono2Micro also
+generates a ***Business Logic Partitioning*** that might present more entanglements and dependencies between partitions, but ultimately
+provides a more useful partitioning of the monolith divided along functional and business logic capabilities.
 
-![](./images/media/image6.png)
+<kbd>![](./images/media/image6.png)</kbd>
 
 ## 3.2 How does Mono2Micro work?
 
-In this lab, you will use a simple JEE monolith application named
-DefaultApplication, and step through the entire Mono2Micro toolset, end
-to end, starting with the monolith and ending with a deployed and
-containerized microservices version of the same application.
+In this lab, you will use a simple JEE monolith application named DefaultApplication, and step through the entire Mono2Micro toolset, end
+to end, starting with the monolith and ending with a deployed and containerized microservices version of the same application.
 
-Mono2Micro consists of six components, each of them serving a specific
-purpose. The component and their uses are listed in the following:
+Mono2Micro consists of six components, each of them serving a specific purpose. The component and their uses are listed in the following:
 
   - **Code analyzer:** Analyzes the Java code of monoliths.
 
-  - **Binary instrumenter** (minerva-agent-1.0.jar): A Java agent that
-instruments a running application deployed on the application server.
-The instrumentation captures entry and exit of every Java method in the
-application
+  - **Binary instrumenter** (minerva-agent-1.0.jar): A Java agent that instruments a running application deployed on the application server.
+The instrumentation captures entry and exit of every Java method in the application
 
-  - **Use case recorder:** A Java program that is used while running test
-cases that gathers runtime analysis data. The use case recorder is used
-to align the start and end times of a use case with the timestamps
-generated from the instrumented code. This allows for Mono2Micro to
+  - **Use case recorder:** A Java program that is used while running test cases that gathers runtime analysis data. The use case recorder is used
+to align the start and end times of a use case with the timestamps generated from the instrumented code. This allows for Mono2Micro to
 track the code being executed in the monolith to specific use cases.
 
-  - **The AI engine for partition recommendations:** The AI engine of
-Mono2Micro which uses machine learning techniques on the user supplied
-runtime traces and metadata obtained from the code analyzer and the use
-case recorder to generate partition recommendations.
+  - **The AI engine for partition recommendations:** The AI engine of Mono2Micro which uses machine learning techniques on the user supplied
+runtime traces and metadata obtained from the code analyzer and the use case recorder to generate partition recommendations.
 
     The AI engine also produces a detailed report for the recommended partitions.
 
-  - **IBM Mono2Micro workbench UI:** The results obtained from the AI engine
-are stored in user’s local storage. The results can be uploaded to the
-workbench UI to display them in a graphical visualizer. The workbench UI
-also allows you to modify the AI engine generated partition
-recommendations.
+  - **IBM Mono2Micro workbench UI:** The results obtained from the AI engine are stored in user’s local storage. The results can be uploaded to the
+workbench UI to display them in a graphical visualizer. The workbench UI also allows you to modify the AI engine generated partition recommendations.
 
-  - **Code generator:** The program with deep knowledge of the semantics of
-the Java programming language. The code generator uses the
+  - **Code generator:** The program with deep knowledge of the semantics of the Java programming language. The code generator uses the
 recommendations from the AI engine.
 
     The code generator performs these important capabilities:
 
     1.  Provides detailed invocation analyses of the recommended partitions
 
-    2.  Generates a significant portion of the code needed to realize the
-    recommended partitions in containers
+    2.  Generates a significant portion of the code needed to realize the recommended partitions in containers
 
 ### **3.2.1 Mono2Micro usage flow**
 
-The illustration below shows how the Mono2Micro components fit into the
-end-to-end process.
+The illustration below shows how the Mono2Micro components fit into the end-to-end process.
 
 |                                         |                                                                                                                                        |
 | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
@@ -152,24 +120,19 @@ end-to-end process.
 
 1.  Use the **code analyzer** to analyze the monolith application
 
-2.  Use the **binary instrumenter** to collect the runtime traces while
-    running business use cases, eliminating the need to rebuild and
+2.  Use the **binary instrumenter** to collect the runtime traces while running business use cases, eliminating the need to rebuild and
     redeploy the Java monolithic application.
 
-3.  Use the **use case recorder** and run test cases to capture runtime
-    execution Trace data in the server logs, based on the analyzed
+3.  Use the **use case recorder** and run test cases to capture runtime execution Trace data in the server logs, based on the analyzed
     source code.
 
-4.  Use the **AI engine** to analyze the data and produce recommended
-    partitions based on Natural Seams and/or Business logic.
+4.  Use the **AI engine** to analyze the data and produce recommended partitions based on Natural Seams and/or Business logic.
 
-5.  Use the **workbench UI** to visualize the partition recommendations,
-    and tweak the recommendations as needed to meet your objectives.
+5.  Use the **workbench UI** to visualize the partition recommendations, and tweak the recommendations as needed to meet your objectives.
 
-6.  Use the **code generator** to generate the plumbing and service code
-    needed to realize the recommended and potential microservices.
+6.  Use the **code generator** to generate the plumbing and service code needed to realize the recommended and potential microservices.
 
-    ![](./images/media/image7.svg)
+    <kbd>![](./images/media/image7.svg)</kbd>
 
 
 ## 4 Accessing the lab environment
@@ -184,69 +147,68 @@ Otherwise, you will need to reserve an environment for the lab. You can obtain o
 
 The lab environment contains one (1) Linux VM, named **Workstation**.
 
-  ![](./images/media/workstation.png)
+  <kbd>![](./images/media/workstation.png)</kbd>
  
   The Ubuntu Linux **Workstation** VM has the following software installed:
   
-  - Docker 19.03.13
-  - Git 2.24.1
-  - Maven 3.6.3java
-  - OpenJDK 1.8.0
+  - Docker 24.0.7
+  - Git 2.39.3
+  - Maven 3.9.5 
+  - Java IBM Semeru 17
 
 1.  Access the lab environment from your web browser. 
+     
+    A `Published Service` is configured to provide access to the **`Workstation`** VM through the noVNC interface for the lab environment.
     
-    A Published Service is configured to provide access to the **Workstation** VM through the noVNC interface for the lab environment.
+    a. When the demo environment is provisioned, click on the **`environment tile`** to open its details view. 
+
+    b. Click on the **`Published Service`** link which will display a **Directory listing**  
     
-    a. When the demo environment is provisioned, click on the **environment tile** to open its details view. 
-
-    b. Click on the **Published Service** link which will display a **Directory listing**  
+    c. Click on the **`vnc.html`** link to open the lab environment through the **noVNC** interface. 
     
-    c. Click on the **"vnc.html"** link to open the lab environment through the **noVNC** interface. 
+    <kbd>![](./images/media/vnc-link.png)</kbd>
     
-    ![](./images/media/vnc-link.png)
+    d. Click the **`Connect`** button 
     
-    d. Click the **Connect** button 
-    
-      ![](./images/media/vnc-connect.png)
+      <kbd>![](./images/media/vnc-connect.png)</kbd>
+
+    e. Enter the password as:  **`IBMDem0s!`**. Then click the **`Send Credentials`** button to access the lab environment. 
+
+    > Note: That is a numeric zero in IBMDem0s!  
+
+      <kbd>![](./images/media/vnc-password.png)</kbd>
+
+	 
+	 <br>
 
 
-    e. Enter the password as:  **passw0rd**. Then click the **Send Credentials** button to access the lab environment. 
+2.  If prompted to Login to the "workstation" VM, use the credetials below: 
 
-    > Note: That is a numeric zero in passw0rd  
-
-      ![](./images/media/vnc-password.png)
-
-
-2. Login with **ibmdemo** ID.
-    
-    a.  Click on the “**ibmdemo**” icon on the Ubuntu screen.
-
-      ![](./images/media/image12.png)
-
-    b. When prompted for the password for “**ibmdemo**” user, enter
-    “**passw0rd**” as the password:
-
-    Password: **passw0rd** (lowercase with a zero instead of the o)
+    The login credentials for the **workstation”** VM is:
  
-      ![](./images/media/image13.png)
-	
-    <br/>
+     - User ID: **techzone**
 
-2.  Once you access the **Student VM** through the published service, you will see the Desktop, which contains all the programs that you will be using (browsers, terminal, etc.)
+     - Password: **IBMDem0s!**
 
-    <br/>    
-	     
+     > Note: That is a numneric zero in the password
+
+	 <br>
+ 
+     <kbd>![student vm screen](./images/media/techzone-user-pw.png)</kbd>
+	 
+	 <br>
+
 ## Tips for working in the lab environment     
 
-1.  You can resize the viewable area using the **noVNC Settings** options to resize the virtual desktop to fit your screen.
+1. You can resize the viewable area using the **noVNC Settings** options to resize the virtual desktop to fit your screen.
 
     a. From the environemnt VM, click on the **twisty** on the noNC control pane to open the menu.  
 
-    ![fit to window](./images/media/z-twisty.png)
+    <kbd>![fit to window](./images/media/z-twisty.png)</kbd>
 
     b. To increase the visible area, click on `Settings > Scaling Mode` and set the value to `Remote Resizing`
       
-     ![fit to window](./images/media/z-remote-resize.png)
+     <kbd>![fit to window](./images/media/z-remote-resize.png)</kbd>
 
 
 2.  You can copy / paste text from the lab guide into the lab environment using the clipboard in the noVNC viewer. 
@@ -255,21 +217,21 @@ The lab environment contains one (1) Linux VM, named **Workstation**.
     
     b. Click the **Clipboard** icon and **paste** the text into the noVNC clipboard
 
-    ![fit to window](./images/media/paste.png)
+    <kbd>![fit to window](./images/media/paste.png)</kbd>
     
     c. Paste the text into the VM, such as to a terminal window, browser window, etc. 
 
     d. Click on the **clipboard** icon again to close the clipboard
 
-    > **NOTE:** Sometimes pasting into a Terminal window in the VM does not work consistently. 
-    
-    > In this case you might try again, or open another Terminal Window and try again, or  paste the text into a **Text Editor** in the VM, and then paste it into the Terminal window in the VM. 
-
-
+   
 3. An alternative to using the noVNC Copy / Paste option, you may consider opening the lab guide in a web browser inside of the VM. Using this method, you can easily copy / paste text from the lab guide without having to use the noVNC clipboard. 
 
-
+<!-- LBH: Added description how to access toolbar -->
+4. Click on the **`Activities`** icon within the VM to switch between different windows or get access the tool bar.
+    <kbd>![fit to window](./images/media/Activies.png)</kbd>
     <br>
+
+
 
 
 # **PART 1 Introduction to the Application and resources used for this lab**
