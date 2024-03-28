@@ -714,7 +714,7 @@ running that scenario on the monolith.
 
     Hit count displays a JSP page with several options that demonstrate a variety of methods to increment a counter, while maintaining state.
 
-    c. Run **hitcount**, choosing each of the following options from the  application in the web browser:
+    c. Run **hitcount**, choosing each of the following options from the  application in the web browser (press on **Increment** after each selection):
 
     - Servlet instance variable
     - Session state (create if necessary)
@@ -724,9 +724,9 @@ running that scenario on the monolith.
 
        - Enterprise Java Bean (JPA)
 
-    When choosing the **EJB** option, you also must select one of the following **Transaction Types**, radio buttons:
+    When choosing the **EJB** option, you also must select one of the following **Transaction Types**, radio buttons (press on **Increment** after each selection):
       
-      -  None
+      - None
       - Commit
       - Rollback
 
