@@ -1315,7 +1315,7 @@ Lets get started\!
 
         cd /home/techzone/Student/m2m-ws-sample/defaultapplication/application-data/mono2micro/mono2micro-user-modified
 
-        google-chrome ./Cardinal-Report-Modified.html
+        firefox ./Cardinal-Report-Modified.html
 
     The Cardinal-Report provides a deep analysis of all the  inter-partition invocations, the types of all the non-primitive  parameters passed to partitions during their invocations, and oreign class references within a partition.
  
