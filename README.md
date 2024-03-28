@@ -390,28 +390,8 @@ In this section of the lab, you will download and install the mono2micro command
         ./mono2micro install -h
  
      command output: 
+    <kbd>![](./images/media/mono2micro-install-help.png)</kbd>
  
-        Install Mono2Micro components and images
-        Usage: mono2micro install [options]
-        Options:
-        -a, --airgap                             Work in an AirGapped Environment
-        -c, --container-engine=<docker|podman>   Set the container engine to Podman (default) or Docker
-        -h, --help                               Display help information
-        -l, --license=<1|2|3|4>                  Accept license:
-                                                1. IBM WebSphere Hybrid Edition 5.1 (L-AMIK-C92MN6)
-                                                2. IBM Mono2Micro 23.0.06 trial (L-KNAV-6S5BZN)
-                                                3. IBM WebSphere Application Server for z/OS V9.0.5.15 (L-QJFA-M33W3S)
-                                                4. IBM WebSphere Application Server for z/OS V8.5.5.23 (L-LRGS-5TV3HE)
-        -r, --repo=<string>                      Set a custom repository prefix to pull Mono2Micro images from.
-                                                If this is not specified or if it is set to "default" then the images will 
-                                                    be pulled from the product repositories.
-        -v, --license-view=<1|2|3|4>             View license:
-                                                1. IBM WebSphere Hybrid Edition 5.1 (L-AMIK-C92MN6)
-                                                2. IBM Mono2Micro 23.0.06 trial (L-KNAV-6S5BZN)
-                                                3. IBM WebSphere Application Server for z/OS V9.0.5.15 (L-QJFA-M33W3S)
-                                                4. IBM WebSphere Application Server for z/OS V8.5.5.23 (L-LRGS-5TV3HE)
-        -z, --verbose                            Enable verbose mode
-
 
 5.  Run the Mono2Micro **install command,** selecting Docker as the container engine:
 
