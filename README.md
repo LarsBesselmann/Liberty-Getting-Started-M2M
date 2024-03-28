@@ -555,23 +555,16 @@ Since we already built the DefaultApplication in the previous section, we can fo
 You will configure the Liberty server to load the Binary instrumenter (minerva-agent-1.0.jar), which is a Java agent that instruments a running application deployed on the application server. The instrumentation captures entry and exit of every Java method in the application
 
 
-1.  Configure the Liberty server to load the Binary instrumenter agent.
+1.  Configure the Liberty server to load the Binary Instrumenter agent.
     
-    a.  Create a jvm.options that will be used by liberty server
+    Create a jvm.options that will be used by Liberty server
 
-        gedit /home/techzone/Student/m2m-ws-sample/defaultapplication/monolith/DefaultApplication-ear/target/liberty/wlp/usr/servers/DefaultApplicationServer/jvm.options
+        echo '-javaagent:/home/techzone/Student/Mono2Micro-CLI/instrumenter/minerva-agent-1.0.jar=/home/techzone/Student/Mono2Micro-CLI/DefaultApplication-mono2micro/instrumenter-config.json' > /home/techzone/Student/m2m-ws-sample/defaultapplication/monolith/DefaultApplication-ear/target/liberty/wlp/usr/servers/DefaultApplicationServer/jvm.options
+
 
     The **jvm.options** file in Liberty is used to set Java Virtual Machine arguments. For Mono2micro, you need to configure the Java agent for the binary instrumenter
 
     
-    b.  Edit the **jvm.options** to point to the files under monolith-mono2micro folder and the binary instrumenter (minerva-agent.jar) under Mono2Micro-CLI/instrumenter folder.
-
-    Copy / Paste the following content into the jvm.options file:
-
-        -javaagent:/home/techzone/Student/Mono2Micro-CLI/instrumenter/minerva-agent-1.0.jar=/home/techzone/Student/Mono2Micro-CLI/DefaultApplication-mono2micro/instrumenter-config.json 
-
-    c.  **Save** the “jvm.options” file and **Close** the editor
-
 
 2.  Run the scripts below to Start the Liberty server and check that the server is in the running state
 
