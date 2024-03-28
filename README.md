@@ -566,7 +566,7 @@ You will configure the Liberty server to load the Binary instrumenter (minerva-a
 
     The **jvm.options** file in Liberty is used to set Java Virtual Machine arguments. For Mono2micro, you need to configure the Java agent for the binary instrumenter
 
-    
+    <kbd>![mono2micro-agent-configuration](./images/media/mono2micro-agent-configuration.png)</kbd>
 
 2.  Run the scripts below to Start the Liberty server and check that the server is in the running state
 
