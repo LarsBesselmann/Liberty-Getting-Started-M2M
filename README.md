@@ -559,24 +559,22 @@ You will configure the Liberty server to load the Binary instrumenter (minerva-a
     
     Create a jvm.options that will be used by Liberty server
 
+        cd /home/techzone/Student/m2m-ws-sample/defaultapplication/monolith/DefaultApplication-ear/target
         echo '-javaagent:/home/techzone/Student/Mono2Micro-CLI/instrumenter/minerva-agent-1.0.jar=/home/techzone/Student/Mono2Micro-CLI/DefaultApplication-mono2micro/instrumenter-config.json' \
-        > /home/techzone/Student/m2m-ws-sample/defaultapplication/monolith/DefaultApplication-ear/target/liberty/wlp/usr/servers/DefaultApplicationServer/jvm.options
+        > liberty/wlp/usr/servers/DefaultApplicationServer/jvm.options
         
 
     The **jvm.options** file in Liberty is used to set Java Virtual Machine arguments. For Mono2micro, you need to configure the Java agent for the binary instrumenter. Review the setting that has been added to the Liberty configuration.
 
-        cat /home/techzone/Student/m2m-ws-sample/defaultapplication/monolith/DefaultApplication-ear/target/liberty/wlp/usr/servers/DefaultApplicationServer/jvm.options
+        cat liberty/wlp/usr/servers/DefaultApplicationServer/jvm.options
 
 
     <kbd>![mono2micro-agent-configuration](./images/media/mono2micro-agent-configuration.png)</kbd>
 
 2.  Run the scripts below to Start the Liberty server and check that the server is in the running state
 
-    As a convenience, we have provided simple scripts for you to use to start and stop the Liberty server, as well as check the status of the server.
-
-        /home/techzone/Student/m2m-ws-sample/defaultapplication/scripts/startServer.sh
-
-        /home/techzone/Student/m2m-ws-sample/defaultapplication/scripts/serverStatus.sh
+        liberty/wlp/bin/server start DefaultApplicationServer
+        liberty/wlp/bin/server status DefaultApplicationServer
 
     <kbd>![](./images/media/image28.png)</kbd>
 
