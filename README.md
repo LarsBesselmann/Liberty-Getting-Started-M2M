@@ -474,24 +474,8 @@ Let’s begin with the build of the .ear file and then the static data collectio
         ./mono2micro analyze -a /home/techzone/Student/m2m-ws-sample/defaultapplication/monolith/DefaultApplication-ear/target/DefaultApplication.ear --analyze-all -i out
 
 4.  The following output will be displayed:
-
-        All packages in the application will be analyzed
-        Starting Minerva Binary Analyzer
-        Analyzing archive /home/techzone/Student/m2m-ws-sample/defaultapplication/monolith/DefaultApplication-ear/target/DefaultApplication.ear.
-        Analyzing class SnoopServlet.
-        Analyzing class HitCount.
-        Analyzing class com.ibm.defaultapplication.IncrementAction.
-        Analyzing class com.ibm.defaultapplication.Increment.
-        Analyzing class com.ibm.defaultapplication.IncrementSSB.
-        Writing file /home/techzone/Student/Mono2Micro-CLI/DefaultApplication-mono2micro/symTable.json.
-        Writing file /home/techzone/Student/Mono2Micro-CLI/DefaultApplication-mono2micro/refTable.json.
-        Writing file /home/techzone/Student/Mono2Micro-CLI/DefaultApplication-mono2micro/instrumenter-config.json.
-        ******************************
-        COMPLETED
-        ******************************
-
-        Next steps: Collect more data by running use cases on your instrumented application with the "mono2micro usecase" command. Read this section of the Mono2Micro documentation for more details: https://www.ibm.com/docs/SS7H9Y/doc/m2m_dct_bininst.html
-
+<kbd>![mono2micro-analyze-all](./images/media/mono2micro-analyze-all.png)</kbd>
+        
     Note that the output files are generated in the current working directory under a directory created based on the application name plus the “mono2micro” suffix, that is, “DefaultApplication-mono2micro” directory. 
 
 
