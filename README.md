@@ -1660,7 +1660,7 @@ functionality in each partition.
         gedit moveResourcesToPartitions.sh
 
     a.  The script defines a bunch of variables referencing various directories for copying files.
-        Make dure that the workdir is set to /home/techzone/Student/m2m-ws-sample
+        Make dure that the workdir is set to /home/techzone/Student/m2m-ws-sample. If not adjust the settings and save the file.
 
     <kbd>![mono2micro-set_workdir](./images/media/mono2micro-set_workdir.png)</kbd>
 
@@ -1687,12 +1687,11 @@ functionality in each partition.
         ./moveResourcesToPartitions.sh
 
 
-    a. If prompted for a password, enter: `passw0rd`
+    a. If prompted for a password, enter: `IBMDem0s!`
 
-        Note: That is a numeric zero in passw0rd
+        Note: That is a numeric zero in IBMDem0s!
 
-4.  Use a graphical **File Explorer** <kbd>![](./images/media/image89.png)</kbd> or **Terminal** window to see the non-Java files now in each of the
-    partitions, and in the same directory structure as the original monolith.
+4.  Use a graphical **File Explorer** or **Terminal** window to see the non-Java files now in each of the partitions, and in the same directory structure as the original monolith.
     
     a.  Navigate to the following directories to explore the newly added **non-Java** resources. Refer to the shell script to see what exactly was copied.
 
