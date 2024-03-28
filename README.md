@@ -1025,8 +1025,7 @@ In addition to the Java components, the application also contains  HTML, JSP, an
  
 The goal of this lab is to split the Default Application monolith into separate microservices, such that the (front-end) Web components run  as a microservice, and the (back-end) EJB and  data layer run as a separate microservice.
  
-In this exercise, we will ensure that the Web components(Servlets,
- HTML, JSP, etc) will be in the (front-end) web partition, and the (back-end) HitCount’s increment action Java / EJB components run in a separate partition.
+In this exercise, we will ensure that the Web components(Servlets, HTML, JSP, etc) will be in the (front-end) web partition, and the (back-end) HitCount’s increment action Java / EJB components run in a separate partition.
 
 1.  Ensure the view in the workbench UI to display partitioning recommendations are set to “**Business Logic”** and it is in **“Graph” mode.**
 
@@ -1036,8 +1035,7 @@ In this exercise, we will ensure that the Web components(Servlets,
 
     - **Business logic** partitioning is based on the runtime calls from the test cases
 
-    - **Natural Seems** partitioning is based on the runtime calls and
-    class dependencies. For example, an Object of class A holds a
+    - **Natural Seems** partitioning is based on the runtime calls and class dependencies. For example, an Object of class A holds a
     reference to an object of class B as a variable
 
        For natural seams-based partitioning, Mono2Micro creates partitions while avoiding inter-partition containment data dependencies –  containment data dependencies between classes belonging to different partitions
@@ -1057,40 +1055,30 @@ In this exercise, we will ensure that the Web components(Servlets,
 
     It is important to notice that the same class labeled as “Utility” on the “Table” mode appears in “Graph” mode as diamond-shaped inside a specific group called "Utility".
 
-3.  From the Business Logic view, notice that there are three
-    **partitions** created. It could be cases where one special partition for
+3.  From the Business Logic view, notice that there are three **partitions** created. It could be cases where one special partition for
     “**Unobserved**” classes is created as well.
 
-    - The **Lines between partitions** indicates where classes from one
-    partition make calls to classes in a different partition
+    - The **Lines between partitions** indicates where classes from one partition make calls to classes in a different partition
 
-    - The **Unobserved** partition is a group of classes that were
-    analyzed but were not found to be included in any of the use case
-    test that were executed earlier. This could be due to dead code, or
-    incomplete set of test cases for adequate code coverage.
+    - The **Unobserved** partition is a group of classes that were analyzed but were not found to be included in any of the use case
+    test that were executed earlier. This could be due to dead code, or incomplete set of test cases for adequate code coverage.
 
 
 4.  Explore the Java classes in partition0, partition1, and Utility partition
     
-    a.  **Double-click** on each of the **partition**s to display the
-        number of Java classes in each partition
+    a.  **Double-click** on each of the **partition**s to display the number of Java classes in each partition
 
     <kbd>![](./images/media/image56.png)</kbd>
 
-    - **Partiton0** contains three classes (HitCount, IncrementAction, 
-    and IncrementSSB) which the classes that were identified
+    - **Partiton0** contains three classes (HitCount, IncrementAction, and IncrementSSB) which the classes that were identified
     as part of the “**hitcount”** use case from our test cases.
 
-    - **Partiton1** contains one class (SnoopServlet) which is the only
-    class that was observed in the “snoop” test case
+    - **Partiton1** contains one class (SnoopServlet) which is the only class that was observed in the “snoop” test case
 
-    - **Utility** contains one class (Increment) which was identified by
-    Mono2Micro as a potential utility class.
+    - **Utility** contains one class (Increment) which was identified by Mono2Micro as a potential utility class.
 
-    - As you can see, there are **no lines** between these partitions,
-    indicating that there is no partition to partition
-    (inter-partitioning) communication observed between the classes in
-    partition0, partition1, and Utility partition.
+    - As you can see, there are **no lines** between these partitions, indicating that there is no partition to partition
+    (inter-partitioning) communication observed between the classes in partition0, partition1, and Utility partition.
     
       - This is because the initial partition recommendations placed all the classes that communicate in the **hitcount** use case into a single partition. Also, by default the inter-partitioning communication to **Utility** partition is disabled.
 
@@ -1101,45 +1089,36 @@ In this exercise, we will ensure that the Web components(Servlets,
 
 ## 2.7 Customizing & Adjusting Partitions
 
-To refine the recommended business logic partitions, let’s consider the
-classes in partition0 and partiton1. In these partitions, the classes
+To refine the recommended business logic partitions, let’s consider the classes in partition0 and partiton1. In these partitions, the classes
 were servlet classes, as well as a POJO and EJB classes.
 
-Given that the DefaultApplication monolith has a web based front-end and
-UI, let’s use one single partition to house all the front-end code for
-the application, which then would include all html/jsp/etc files, and
-the Java servlet classes which are referred to by the html file.
+Given that the DefaultApplication monolith has a web based front-end and UI, let’s use one single partition to house all the front-end code for
+the application, which then would include all html/jsp/etc files, and the Java servlet classes which are referred to by the html file.
 
 |                                            |                                                                                                                                                                                           |
 | ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | <kbd>![sign-caution](./images/media/warn.png)</kbd> | The important point to note here is that **Java servlets** need to be running on the \***same**\* application server instance that serves up the **html** files referring to the servlets |
 
-The goal of this lab is to split the Default Application monolith into
-separate microservices such that:
+The goal of this lab is to split the Default Application monolith into separate microservices such that:
 
   - The **(front-end**) Web components run as a microservice
 
   - The (**back-end**) EJB and data layer run as a separate microservice
 
-The partition recommendation from Mono2Micro are a good first step
-toward partitioning the application for microservices.
+The partition recommendation from Mono2Micro are a good first step toward partitioning the application for microservices.
 
-The illustration below shows our desired final state of the
-partitioning, which will then be used as the basis for the microservice
+The illustration below shows our desired final state of the partitioning, which will then be used as the basis for the microservice
 code generation later in the lab.
 
-In this section of the lab, you will use the Mono2Micro workbench UI and
-tweak the graph to the desired state.
+In this section of the lab, you will use the Mono2Micro workbench UI and tweak the graph to the desired state.
 
 </kbd>![](./images/media/image58.png)</kbd>
 
-Tweaking the business logic recommendations is straight forward using
-the UI, and includes these basic steps, which you will do next:
+Tweaking the business logic recommendations is straight forward using the UI, and includes these basic steps, which you will do next:
 
 -  **Move Increment (Entity) class to the partition0**. All three classes in **partition0** depend on **Increment** and **SnoopServlet** does not depend on **Increment**.
 
--  **Rename partition1 to web**. This is not required but illustrates
-    the capability to create partitions with names that make sense. This
+-  **Rename partition1 to web**. This is not required but illustrates the capability to create partitions with names that make sense. This
     is useful during the code generation phase.
 
 -  **Move HitCount Servlet (Service Entry) class to the web partition**. All the Servlets and other front-end components should be here.
@@ -1150,8 +1129,7 @@ the UI, and includes these basic steps, which you will do next:
 
 1.  Create a custom view for editing the partitioning recommendations
     
-    a. To create a custom view, first select **Custom View** from the
-        **Graph view** tab menu
+    a. To create a custom view, first select **Custom View** from the **Graph view** tab menu
 
     <kbd>![](./images/media/image59.png)</kbd>
 
