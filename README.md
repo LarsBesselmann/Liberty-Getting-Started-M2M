@@ -679,10 +679,6 @@ running that scenario on the monolith.
     This starts the **use case recorder** stopwatch for the snoop test case.
     <kbd>![](./images/media/mono2micro-snoop.png)</kbd>
 
-        A filename is not specified. Creating a default file: "context_1681760275797.json".
-        Enter <Label> to start recording current context or enter 1 to exit.
-        snoop
-        Enter 9 to stop the recording of the current context.
 
     c.  From the Web Browser, click on the **Snoop Servlet** link in the DefaultApplication HTML page. Snoop requires basic authentication.
     
