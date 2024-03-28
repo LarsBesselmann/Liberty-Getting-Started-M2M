@@ -357,11 +357,21 @@ In Part 2 of the lab, you will first install the Mono2Micro tools. Then you will
 
 ## 2.1 Installing Mono2Micro tools
 
-Mono2Micro has already been installed. Please refer to the appendix if you want to see the details how the installation is done.
+In this section of the lab, you will download and install the mono2micro command line tool.
 
-1.  Switch to the directory where mono2micro has been installed, then run the Mono2Micro CLI version commands:
+1.  Download the Mono2Micro-CLI.zip and unzip it in the user directory folder:
 
-        cd /home/techzone/Mono2Micro-CLI
+        cd /home/techzone/Downloads
+
+        curl https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/mono2micro/Mono2Micro-CLI.zip --output Mono2Micro-CLI.zip
+
+        unzip Mono2Micro-CLI.zip -d /home/techzone/Student/Mono2Micro-CLI
+
+        cd /home/techzone/Student/Mono2Micro-CLI
+
+
+2.  Run the Mono2Micro CLI version commands:
+
         ./mono2micro -v
         
     command output:     
