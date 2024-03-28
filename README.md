@@ -397,7 +397,7 @@ In this section of the lab, you will download and install the mono2micro command
 
         ./mono2micro install -c docker
     You need to choose option **`1`** to accept the license:
-    <kbd>![](./images/media/mono2micro-install-help.png)</kbd>
+    <kbd>![](./images/media/mono2micro-install.png)</kbd>
 
 
 ## Use Mono2Micro’s code analyzer for collecting data on the monolith application 
