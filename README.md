@@ -422,7 +422,6 @@ Let’s begin with the build of the .ear file and then the static data collectio
     Change to the directory location of the application code, and run the maven build.
 
         cd /home/techzone/Student/m2m-ws-sample/defaultapplication/monolith
-
         mvn -DskipTests=true clean install
 
     Maven should have successfully built the application and generated the  binary artifacts (EAR, WAR), and placed them in the Liberty Server “apps” folder.
@@ -432,7 +431,6 @@ Let’s begin with the build of the .ear file and then the static data collectio
 2.  Return to Mono2Micro folder and run the code analyzer with help option to verify the possibilities available:
 
         cd /home/techzone/Student/Mono2Micro-CLI
-
         ./mono2micro analyze -h
         
     command output:     
