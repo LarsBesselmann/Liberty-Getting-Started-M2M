@@ -591,17 +591,17 @@ You will configure the Liberty server to load the Binary instrumenter (minerva-a
     </table>
 
 3.   Use the **Activities** Icon to switch to the toolbar, then click the **Firefox** icon to open a browser window.
-
+    
     <kbd>![](./images/media/Toolbar_firefox.png)</kbd>
     
-    From the web browser, enter the URL **http://localhost:9080** to launch the DefaultApplication. The main HTML page will be displayed.
+4. From the web browser, enter the URL **http://localhost:9080** to launch the DefaultApplication. The main HTML page will be displayed.
     Notice the application only has two main features:
     - Snoop
     - Hit Count
 
     <kbd>![](./images/media/image16.png)</kbd>
 
-4.  Open the console.log file to check that the binary instrumenter was initiated:
+5.  Open the console.log file to check that the binary instrumenter was initiated:
 
         head -25 /home/techzone/Student/m2m-ws-sample/defaultapplication/monolith/DefaultApplication-ear/target/liberty/wlp/usr/servers/DefaultApplicationServer/logs/console.log | grep Minerva
 
