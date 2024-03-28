@@ -573,6 +573,8 @@ You will configure the Liberty server to load the Binary instrumenter (minerva-a
 
 2.  Run the scripts below to Start the Liberty server and check that the server is in the running state
 
+        cd /home/techzone/Student/m2m-ws-sample/defaultapplication/monolith/DefaultApplication-ear/target
+
         liberty/wlp/bin/server start DefaultApplicationServer
 
         liberty/wlp/bin/server status DefaultApplicationServer
@@ -802,9 +804,10 @@ running that scenario on the monolith.
 
 4.  Run the script below to **Stop** the Liberty server
 
-    As a convenience, we have provided simple scripts for you to use to  start and stop the Liberty server, as well as check the status of the server.
+        cd /home/techzone/Student/m2m-ws-sample/defaultapplication/monolith/DefaultApplication-ear/target
+        
+        liberty/wlp/bin/server stop DefaultApplicationServer
 
-        /home/techzone/Student/m2m-ws-sample/defaultapplication/scripts/stopServer.sh
 
     <kbd>![](./images/media/image41.png)</kbd>
 
