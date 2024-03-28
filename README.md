@@ -362,11 +362,8 @@ In this section of the lab, you will download and install the mono2micro command
 1.  Download the Mono2Micro-CLI.zip and unzip it in the user directory folder:
 
         cd /home/techzone/Downloads
-
         curl https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/mono2micro/Mono2Micro-CLI.zip --output Mono2Micro-CLI.zip
-
         unzip Mono2Micro-CLI.zip -d /home/techzone/Student/Mono2Micro-CLI
-
         cd /home/techzone/Student/Mono2Micro-CLI
 
 
