@@ -421,7 +421,7 @@ Let’s begin with the build of the .ear file and then the static data collectio
 
     Adjust the sample package to use the default JDK instead of the one rferenced in the Liberty server.xml.
 
-        cd /home/techzone/Student/m2m-ws-sample/defaultapplication/monolith/defaultapplication/monolith/DefaultApplication-ear/src/main/liberty/config
+        cd /home/techzone/Student/m2m-ws-sample/defaultapplication/monolith/DefaultApplication-ear/src/main/liberty/config
         mv server.env server.env.sav
 
 
