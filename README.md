@@ -1243,11 +1243,11 @@ Lets get started\!
 
     <kbd>![](./images/media/image71.png)</kbd>
 
-2.  From the same folder as the **custom-graph.json** file, modify the permissions for **config.ini** so that we have write permissions
+2.  From the same folder as the **custom-graph.json** file, modify the permissions for **config.ini** so that we have write permissions. 
+    When prompted, enter the sudo password for techzone user: IBMDem0s!
 
         sudo chmod 777 ./config.ini
 
-            When prompted, enter the sudo password for ibmdemo user: passw0rd
 
 3.  Edit the **config.ini** file to reference the new **custom_graph.json** file to be used for regenerating the partition recommendations. (Use any editor available)
 
