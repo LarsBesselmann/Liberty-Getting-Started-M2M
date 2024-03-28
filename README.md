@@ -441,6 +441,8 @@ Let’s begin with the build of the .ear file and then the static data collectio
         
     command output:     
         
+    <kbd>![mono2micro-analyze-help](./images/media/mono2micro-analyze-help.png)</kbd>
+        
         Analyze the monolith application source code or binary code
         Usage: mono2micro analyze [options] (-a=<file> | -s=<dir>)
         Options:
