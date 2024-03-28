@@ -601,9 +601,9 @@ You will configure the Liberty server to load the Binary instrumenter (minerva-a
 
     <kbd>![](./images/media/image16.png)</kbd>
 
-5.  Open the console.log file to check that the binary instrumenter was initiated:
+5.  Switch back to the terminal window and Open the console.log file to check that the binary instrumenter was initiated:
 
-        head -25 /home/techzone/Student/m2m-ws-sample/defaultapplication/monolith/DefaultApplication-ear/target/liberty/wlp/usr/servers/DefaultApplicationServer/logs/console.log | grep Minerva
+        head -25 liberty/wlp/usr/servers/DefaultApplicationServer/logs/console.log | grep Minerva
 
     The console.log should include the following messages, as illustrated below. This is an indication that the application is ready to run the test cases.
 
