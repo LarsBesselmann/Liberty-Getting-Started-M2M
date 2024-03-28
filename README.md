@@ -1257,6 +1257,7 @@ Lets get started\!
 
 
     a.   Modify the value for the “**`UserModifiedGraph`**” property to **`custom_graph.json`**
+    <kbd>![](./images/media/mono2micro-config.png)</kbd>
 
     b.  **Save** and **Close** the config.ini file
 
