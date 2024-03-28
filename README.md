@@ -443,40 +443,7 @@ Let’s begin with the build of the .ear file and then the static data collectio
         
     <kbd>![mono2micro-analyze-help](./images/media/mono2micro-analyze-help.png)</kbd>
         
-        Analyze the monolith application source code or binary code
-        Usage: mono2micro analyze [options] (-a=<file> | -s=<dir>)
-        Options:
-        -a, --archive-filename=<file>            Specify the application archive file name for binary 
-                                                    analysis. By default during binary analysis, the packages 
-                                                    specified below will be excluded. Options described below 
-                                                    can be used to either add packages exclusions to this 
-                                                    list or provide a specific inclusion or exclusion list.
-        -d, --add-to-exclude-packages=<string>   Specify a comma-separated list of packages to be added to 
-                                                    the default list of packages to be excluded. The default 
-                                                    list of excluded packages is: ch.qos,com.cognos,com. 
-                                                    fasterxml,com.ibatis,com.ibm,com.informix,com.lowagie, 
-                                                    com.mchange,com.meterware,com.microsoft,com.mysql,com. 
-                                                    sun,com.sybase,freemarker,groovy,jakarta,java,javax,net, 
-                                                    oracle,org,sqlj,sun,twitter4j,_ibmjsp,weblogic,kodo, 
-                                                    com.solarmetric,com.bea
-        -e, --exclude-packages=<string>          Specify a comma-separated list of packages to be excluded 
-                                                    for binary analysis. All classes except for those in 
-                                                    these packages will be analyzed
-        -h, --help                               Display help information
-        -i, --instrumentation-target=<out|err>   Specify the instrumentation target to be used: standard 
-                                                    error "err" (default) or standard output "out"
-        -j, --java-opts="<string>"               Specify custom JVM options to be used by the analyzer. The 
-                                                    options string needs to be placed within double quotes, 
-                                                    for example: "-Xmx512m".
-        -l, --analyze-all                        Analyze all packages and classes during binary analysis
-        -n, --include-packages=<string>          Specify a comma-separated list of packages to be included 
-                                                    for binary analysis. Only classes in these packages will 
-                                                    be analyzed
-        -o, --output-analysis-dir=<dir>          Specify the output directory for the analysis files
-        -s, --srcdir=<dir>                       Specify the application source code directory
-        -z, --verbose                            Enable verbose mode
-
-
+        
     The following options are exclusively used to control the Java packages to be analyzed with the binary analyzer. None of the options persist because the analyzer does not save any list or user preference. Thus, you must specify the wanted options for each execution. For the options, specify a comma-separated list with no empty spaces; 
     
     For example:
