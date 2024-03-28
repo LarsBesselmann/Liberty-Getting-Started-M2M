@@ -1772,9 +1772,9 @@ partition (microservice) will compile and run on their own Liberty Server in sep
 
         ./refactorPartitions.sh
 
-    c. If prompted for a password, enter: `passw0rd`
+    c. If prompted for a password, enter: `IBMDem0s!`
 
-        Note: That is a numeric zero in passw0rd
+        Note: That is a numeric zero in IBMDem0s!
 
     <kbd>![](./images/media/image90.png)</kbd>
  
