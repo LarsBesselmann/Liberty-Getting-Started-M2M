@@ -1659,7 +1659,8 @@ functionality in each partition.
 
         gedit moveResourcesToPartitions.sh
 
-    a.  The script defines a bunch of variables referencing various directories for copying files
+    a.  The script defines a bunch of variables referencing various directories for copying files.
+        Make dure that the workdir is set to /home/techzone/Student/m2m-ws-sample
 
         <kbd>![mono2micro-set_workdir](./images/media/mono2micro-set_workdir.png)</kbd>
 
