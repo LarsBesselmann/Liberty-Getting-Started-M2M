@@ -907,19 +907,10 @@ generate partition recommendations.
 2.  Check the options available to run the AI engine:
 
         ./mono2micro recommend -h
-    
+
     command output: 
 
-        Run the AI engine on collected application data to recommend partitions for the monolith
-        Usage: mono2micro recommend [options] -d=<dir>
-        Options:
-        -d, --data-dir=<dir>            Specify directory containing the application data files, subdirectories, and optional config.ini
-            --exclude-utility-classes   Exclude utility classes from consideration for AI analysis and recommendation of partitions. All other
-                                            application classes will be considered for placement in recommended partitions by Mono2Micro, and the utility
-                                            classes will be placed in a special group which can be packaged as a utility jar.
-        -h, --help                      Display help information
-        -s, --status                    Show the last stage that the AI engine was run to completion for this application
-        -z, --verbose                   Enable verbose mode
+    <kbd>![mono2micro-recommend-help](./images/media/mono2micro-recommend-help.png)</kbd>    
 
 
 3.  Run the AI engine using the following command:
