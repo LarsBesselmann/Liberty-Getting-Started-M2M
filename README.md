@@ -919,7 +919,7 @@ generate partition recommendations.
 
     Which will produce an output similar to this:
  
-    <kbd>![](./images/media/image47.png)</kbd>
+    <kbd>![mono2micro-recommend](./images/media/mono2micro-recommend.png)</kbd>
  
     When the AI engine finishes its analysis, it will generate an application partitioning recommendations **graph .json** file, various reports, and other output files in the **application-data/mono2micro/mono2micro-output/** subdirectory within the parent directory of the input subdirectories.
 
