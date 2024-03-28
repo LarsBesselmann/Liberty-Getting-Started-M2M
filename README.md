@@ -308,7 +308,10 @@ The GitHub repo includes all the artifacts needed to complete this lab on your l
 
 1.  Clone the GitHub repository.
     
-    a.  Open a Terminal window and run the following commands:
+    a.  Use the **Activities** Icon to switch to the toolbar, then click the **Terminal** icon to open a Terminal window.
+        <kbd>![](./images/media/Toolbar_terminal_new.png)</kbd>
+    
+    b. In the Terminal window, run the following commands:
 
         mkdir /home/techzone/Student
         cd /home/techzone/Student
