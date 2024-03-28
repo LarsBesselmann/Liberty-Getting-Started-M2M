@@ -432,7 +432,7 @@ Let’s begin with the build of the .ear file and then the static data collectio
 
     Maven should have successfully built the application and generated the  binary artifacts (EAR, WAR), and placed them in the Liberty Server “apps” folder.
 
-    <kbd>![](./images/media/image27.png)</kbd>
+    <kbd>![image27](./images/media/image27.png)</kbd>
 
 2.  Return to Mono2Micro folder and run the code analyzer with help option to verify the possibilities available:
 
