@@ -251,12 +251,12 @@ HTML page in the application
   - SnoopServlet
   - HitCount
 
-![](./images/media/image16.png)
+<kbd>![](./images/media/image16.png)</kbd>
 
 **Snoop servlet** retrieves information about a servlet request. This
 servlet returns the following information:
 
-![](./images/media/image17.png)
+<kbd>![](./images/media/image17.png)</kbd>
 
 **Hit Count** demonstrates how to increment a counter using a variety of
 methods, including:
@@ -265,7 +265,7 @@ methods, including:
   - An HTTP session
   - An enterprise bean
 
-![](./images/media/image18.png)
+<kbd>![](./images/media/image18.png)</kbd>
 
 You can instruct the servlet to execute any of these methods within a
 transaction that you can commit or roll back. If the transaction is
@@ -331,7 +331,7 @@ on your local workstation.
         
         git clone https://github.com/kpostreich/m2m-ws-sample
 
-    ![](./images/media/image19.png)
+    <kbd>![](./images/media/image19.png)</kbd>
 
 2.  Change to the workshop directory that contains the cloned repository
     artifacts. Then list the directory contents.
@@ -374,7 +374,7 @@ In Part 2 of the lab, you will first install the Mono2Micro tools. Then you will
     recommendations and modify the initial recommendations to further
     customize the microservice recommendations.
 
-![](./images/media/image7.svg)
+<kbd>![](./images/media/image7.svg)</kbd>
 
 ## 2.1 Installing Mono2Micro tools
 
@@ -548,7 +548,7 @@ Let’s begin with the build of the .ear file and then the static data collectio
 
     Maven should have successfully built the application and generated the  binary artifacts (EAR, WAR), and placed them in the Liberty Server “apps” folder.
 
-    ![](./images/media/image27.png)
+    <kbd>![](./images/media/image27.png)</kbd>
 
 2.  Return to Mono2Micro folder and run the code analyzer with help option to verify the possibilities available:
 
@@ -753,7 +753,7 @@ You will configure the Liberty server to load the Binary instrumenter (minerva-a
 
         /home/ibmdemo/m2m-ws-sample/defaultapplication/scripts/serverStatus.sh
 
-    ![](./images/media/image28.png)
+    <kbd>![](./images/media/image28.png)</kbd>
 
     <table>
     <tbody>
@@ -774,7 +774,7 @@ You will configure the Liberty server to load the Binary instrumenter (minerva-a
   - Snoop
   - Hit Count
 
-    ![](./images/media/image16.png)
+    <kbd>![](./images/media/image16.png)</kbd>
 
 4.  Open the console.log file to check that the binary instrumenter was initiated:
 
@@ -782,7 +782,7 @@ You will configure the Liberty server to load the Binary instrumenter (minerva-a
 
     The console.log should include the following messages, as illustrated below. This is an indication that the application is ready to run the test cases.
 
-    ![](./images/media/image29.png)
+    <kbd>![](./images/media/image29.png)</kbd>
 
 
 
@@ -866,11 +866,11 @@ running that scenario on the monolith.
     > Password: **change1me** (that is the number 1 in the password).
     > 
 
-    ![](./images/media/image33.png)
+    <kbd>![](./images/media/image33.png)</kbd>
 
-    d.  Run snoop multiple times: Just click the Browsers “Reload Page” ![](./images/media/image34.png) button.
+    d.  Run snoop multiple times: Just click the Browsers “Reload Page” <kbd>![](./images/media/image34.png)</kbd> button.
 
-    e. When finished, click on the Browsers “**back**” button ![](./images/media/image35.png) to return to the applications main   > HTML page.
+    e. When finished, click on the Browsers “**back**” button <kbd>![](./images/media/image35.png)</kbd> to return to the applications main   > HTML page.
 
     f.  In the **use case recorder**, enter **`9`**, to stop the stopwatch for the test case
 
@@ -926,7 +926,7 @@ running that scenario on the monolith.
 
     This action invokes an EJB and uses JPA to persist the increment state to a Derby database.
 
-    ![](./images/media/image38.png)
+    <kbd>![](./images/media/image38.png)</kbd>
 
     e.  You can run **HitCount** multiple times, choosing different
     “**Transaction Type**” options.
@@ -982,7 +982,7 @@ running that scenario on the monolith.
 
         /home/ibmdemo/m2m-ws-sample/defaultapplication/scripts/stopServer.sh
 
-    ![](./images/media/image41.png)
+    <kbd>![](./images/media/image41.png)</kbd>
 
 
 ## 2.4 Review the output from the use case recorder and the Liberty Log file based on the test cases
@@ -1013,7 +1013,7 @@ generated for the snoop and hit count test cases
 
     Notice the two test cases were recorded, along wit the start and stop timestamps for each testcase.
  
-    ![](./images/media/image42.png)
+    <kbd>![](./images/media/image42.png)</kbd>
 
 2.  View the Liberty log file to ensure the log contains the trace
     statements from the application.
@@ -1022,7 +1022,7 @@ generated for the snoop and hit count test cases
 
     As illustrated in the screenshot below, the Liberty server log file (messages.log) will include trace data that captures the entry and exit of each Java method called, along with the timestamp of the  invocation
  
-    ![](./images/media/image43.png)
+    <kbd>![](./images/media/image43.png)</kbd>
  
     As illustrated in the screenshot below, the Liberty server log file (messages.log) will include trace data that captures the entry and exit of each Java method called, along with the timestamp of the invocation.
 
@@ -1075,7 +1075,7 @@ exact Java classes and methods were executed during the start and stop
 times of each use case, and thereby associate the observed flow of code
 within the application to a use case.
 
-![](./images/media/image44.png)
+<kbd>![](./images/media/image44.png)</kbd>
 
 Let’s proceed to the next phase of using Mono2Micro, which is to run the AI analyzer tool against this data.
 
@@ -1170,7 +1170,7 @@ generate partition recommendations.
 
     Which will produce an output similar to this:
  
-    ![](./images/media/image47.png)
+    <kbd>![](./images/media/image47.png)</kbd>
  
     When the AI engine finishes its analysis, it will generate an application partitioning recommendations **graph .json** file, various reports, and other output files in the **application-data/mono2micro/mono2micro-output/** subdirectory within the parent directory of the input subdirectories.
 
@@ -1228,12 +1228,12 @@ generated by loading the **final\_graph.json** in the workbench UI.
 
         ./mono2micro workbench
 
-    ![](./images/media/image49.png)
+    <kbd>![](./images/media/image49.png)</kbd>
 
 3.  From a web browser, navigate to
     [**http://localhost:3000/**](http://localhost:3000/)
 
-    ![](./images/media/image50.png)
+    <kbd>![](./images/media/image50.png)</kbd>
 
 4.  Load the **final\_graph.json** file in the mono2micro UI
     
@@ -1246,17 +1246,17 @@ generated by loading the **final\_graph.json** in the workbench UI.
 
     c.  Click the “**Open**” button on the **File Upload** dialog, to load the file into the UI
 
-    ![](./images/media/image51.png)
+    <kbd>![](./images/media/image51.png)</kbd>
 
     d.  From the UI, click the “**`Maybe Later`**” button to SKIP the tour, and proceed to the results
 
-    ![](./images/media/image52.png)
+    <kbd>![](./images/media/image52.png)</kbd>
 
     e.  As illustrated below, the UI displays the initial recommendations for partitioning the application into microservices.
 
      **Note:** You can use the mouse to **drag** the **partition** circles to position them where you like on the canvas, as illustrated below.
  
-     ![Graphical user interface, diagram, application, Teams Description automatically generated](./images/media/image53.png)
+     <kbd>![](./images/media/image53.png)</kbd>
 
 
 ### **2.6.3.1 From the workbench UI, explore the partition recommendations** 
@@ -1284,11 +1284,9 @@ The goal of this lab is to split the Default Application monolith into separate 
 In this exercise, we will ensure that the Web components(Servlets,
  HTML, JSP, etc) will be in the (front-end) web partition, and the (back-end) HitCount’s increment action Java / EJB components run in a separate partition.
 
-1.  Ensure the view in the workbench UI to display partitioning
-    recommendations are set to “**Business Logic”** and it is in
-    **“Graph” mode.**
+1.  Ensure the view in the workbench UI to display partitioning recommendations are set to “**Business Logic”** and it is in **“Graph” mode.**
 
-    ![Graphical user interface Description automatically generated](./images/media/image54.png)
+    <kbd>![](./images/media/image54.png)</kbd>
 
     Alternatively, you can use the tab selector to view the recommendations based on “Natural Seems” or “Custom View”.
 
@@ -1305,13 +1303,13 @@ In this exercise, we will ensure that the Web components(Servlets,
 
     Also, you can later explore by yourself the workbench UI in the  “Table” mode, which provides the equivalent configuration ability, but using a table perspective, instead of a graph.
  
-    ![](./images/media/image55.png)
+    <kbd>![](./images/media/image55.png)</kbd>
 
     Note that by using “Table” mode the classes can have labels. When the AI engine recognizes a class as a “Utility” class, it automatically displays on the Workbench UI the “Utility” label on the “Table” mode and places it on a "Utility" group. A Utility class defines a set of methods that perform common tasks. Utility classes mostly have incoming method calls from other classes in the application. They might also have, or alternatively have, mostly static member fields and methods, and various other characteristics.
 
 2.  If you explored other views, return to the “**Business Logic”** view in “**Graph**” Mode
 
-    ![Graphical user interface, diagram, application, Teams Description automatically generated](./images/media/image53_b.png)
+    <kbd>![](./images/media/image53_b.png)</kbd>
 
     It is important to notice that the same class labeled as “Utility” on the “Table” mode appears in “Graph” mode as diamond-shaped inside a specific group called "Utility".
 
@@ -1333,7 +1331,7 @@ In this exercise, we will ensure that the Web components(Servlets,
     a.  **Double-click** on each of the **partition**s to display the
         number of Java classes in each partition
 
-    ![Graphical user interface, application Description automatically  generated](./images/media/image56.png)
+    <kbd>![](./images/media/image56.png)</kbd>
 
     - **Partiton0** contains three classes (HitCount, IncrementAction, 
     and IncrementSSB) which the classes that were identified
@@ -1389,8 +1387,7 @@ code generation later in the lab.
 In this section of the lab, you will use the Mono2Micro workbench UI and
 tweak the graph to the desired state.
 
-![Diagram Description automatically
-generated](./images/media/image58.png)
+</kbd>![](./images/media/image58.png)</kbd>
 
 Tweaking the business logic recommendations is straight forward using
 the UI, and includes these basic steps, which you will do next:
@@ -1412,15 +1409,15 @@ the UI, and includes these basic steps, which you will do next:
     a. To create a custom view, first select **Custom View** from the
         **Graph view** tab menu
 
-    ![](./images/media/image59.png)
+    <kbd>![](./images/media/image59.png)</kbd>
 
     b.   Select **Business logic** view as the starting point for the custom view. The click the **Create view** button.
 
-    ![](./images/media/image60.png)
+    <kbd>![](./images/media/image60.png)</kbd>
 
     c.  Make sure to set the toggle of “**Lock partitions**” to “**off**” position to allow editing of the graph
 
-    ![](./images/media/image61.png)
+    <kbd>![](./images/media/image61.png)</kbd>
 
     d.  **NOTE:** You may use the mouse to drag the partitions to re-position them on the canvas, if you like.
 
@@ -1428,13 +1425,13 @@ the UI, and includes these basic steps, which you will do next:
 2.  Double-click on each of the partitions to alternate between the view
     the classes within the partitions or to view the number of Java classes in each partition.
 
-    ![Graphical user interface, diagram Description automatically  generated](./images/media/image62.png)
+    <kbd>![](./images/media/image62.png)</kbd>
 
 3. Move the **Increment** (Entity) class to the "**partition0**" partition
 
     a. Click on **Increment** class from **Utility** partition
 
-    ![](./images/media/image62_a.png)
+    <kbd>![](./images/media/image62_a.png)</kbd>
 
     Note that all three classes in **partition0** have arrows pointing to **Increment** in **Utility** partition. This means that those classes depend on **Increment**. Similarly, we can conclude that **partition1** does not depend on **Increment** because there are no arrows between them. 
     
@@ -1442,52 +1439,48 @@ the UI, and includes these basic steps, which you will do next:
  
     b.  Drag and Drop the **Increment** class from **Utility** partition to the **partition0** partition. 
 
-    ![](./images/media/image62_b.png)
+    <kbd>![](./images/media/image62_b.png)</kbd>
 
     c. The **Increment** class is now located in the **partition0**.
 
-    ![](./images/media/image62_c.png)
+    <kbd>![](./images/media/image62_c.png)</kbd>
 
 4.  Rename “partition1” to “web”
     
-    a.  Click on **partition1** that includes the SnoopServlet class and
-        then on the “**Details**” button
+    a.  Click on **partition1** that includes the SnoopServlet class and then on the “**Details**” button
 
-    ![](./images/media/image63.png)
+    <kbd>![](./images/media/image63.png)</kbd>
 
     b. After that, the details section will open. Then, click on the  pencil icon ![Icon Description automatically generated](./images/media/image64.png) to rename the partition.
 
-    ![](./images/media/image65.png)
+    <kbd>![](./images/media/image65.png)</kbd>
 
     c.  Type **web** as the new partition name. Then press **ENTER** key to finalize the name change
 
-    ![](./images/media/image66.png)
+    <kbd>![](./images/media/image66.png)</kbd>
 
     d.  Click the “**details**” button to close the detail section.
 
-    ![](./images/media/image67.png)
+    <kbd>![](./images/media/image67.png)</kbd>
 
     e.  The partition has been renamed to “**web”**
 
-    ![Graphical user interface, text, application, chat or text message  Description automatically generated](./images/media/image68.png)
+    <kbd>![](./images/media/image68.png)</kbd>
 
-5.  Move the **HitCount** (Service Entry) class to the “**web**”
-    partition
+5.  Move the **HitCount** (Service Entry) class to the “**web**” partition
     
-    a.  Drag and Drop the **HitCount** class from **partition0** to the
-        **web** partition
+    a.  Drag and Drop the **HitCount** class from **partition0** to the **web** partition
 
-    ![Diagram Description automatically  generated](./images/media/image69.png)
+    <kbd>![](./images/media/image69.png)</kbd>
 
     b.  The **HitCount** class is now located in the web partition.
 
-    ![Diagram Description automatically  generated](./images/media/image58_b.png)
+    <kbd>![](./images/media/image58_b.png)</kbd>
 
-6.  Click on the “**Save partitions**” button to save the updated custom
-    view. The customized **final\_graph.json** file is saved to the
+6.  Click on the “**Save partitions**” button to save the updated custom view. The customized **final\_graph.json** file is saved to the
     **“/home/ibmdemo/Downloads”** folder.
 
-    ![](./images/media/image70.png)
+    <kbd>![](./images/media/image70.png)</kbd>
 
 
 ### **2.7.2 Regenerate the partition recommendations by rerunning the AI engine against the customized graph**
@@ -1529,18 +1522,15 @@ Lets get started\!
 
         ls -l
 
-    ![](./images/media/image71.png)
+    <kbd>![](./images/media/image71.png)</kbd>
 
-2.  From the same folder as the **custom-graph.json** file, modify
-    the permissions for **config.ini** so that we have write permissions
+2.  From the same folder as the **custom-graph.json** file, modify the permissions for **config.ini** so that we have write permissions
 
         sudo chmod 777 ./config.ini
 
             When prompted, enter the sudo password for ibmdemo user: passw0rd
 
-3.  Edit the **config.ini** file to reference the new
-    **custom_graph.json** file to be used for regenerating the
-    partition recommendations. (Use any editor available)
+3.  Edit the **config.ini** file to reference the new **custom_graph.json** file to be used for regenerating the partition recommendations. (Use any editor available)
 
         gedit ./config.ini
 
@@ -1575,8 +1565,7 @@ Lets get started\!
             Threshold = 0.7
 
 
-4.  Go to the Mono2Micro-CLI directory and then rerun the AI engine with
-    the “**refine”** command to generate the partitioning
+4.  Go to the Mono2Micro-CLI directory and then rerun the AI engine with the “**refine”** command to generate the partitioning
     recommendations based on the updated graph file.
 
         cd /home/ibmdemo/Mono2Micro-CLI
@@ -1585,14 +1574,13 @@ Lets get started\!
 
     That will display the following output:
  
-    ![](./images/media/image73.png)
+    <kbd>![](./images/media/image73.png)</kbd>
 
 
 
 ### **2.7.3 Explore the generated Cardinal report based on the customized graph and regenerated recommendations from the AI engine**
 
-1.  The AI engine created a new folder based on the user modified graph
-    in the following directory:
+1.  The AI engine created a new folder based on the user modified graph in the following directory:
 
     > */home/ibmdemo/m2m-ws-sample/defaultapplication/application-data/mono2micro/mono2micro-user-modified*
 
@@ -1600,7 +1588,7 @@ Lets get started\!
 
         ls -l /home/ibmdemo/m2m-ws-sample/defaultapplication/application-data/mono2micro/mono2micro-user-modified
 
-    ![](./images/media/image74.png)
+    <kbd>![](./images/media/image74.png)</kbd>
 
 2.  View the generated Cardinal report to verify the partitions and
     exposed services are defined as expected.
@@ -1613,7 +1601,7 @@ Lets get started\!
  
      Classes are foreign to a partition if they are defined in another  partition.
 
-     ![](./images/media/image75-a.png)
+     <kbd>![](./images/media/image75-a.png)</kbd>
  
 
 3.  Review the **partition0** Partition
@@ -1637,7 +1625,7 @@ Lets get started\!
  
     During the code generation phase of Mono2Micro, the code generator  will generate a REST service interface for the **IncrementAction**  class and the **Increment** class so that other microservices can  make  the remote method calls in a loosely coupled Microservices  architecture.
  
-    ![](./images/media/image80.png)
+    <kbd>![](./images/media/image80.png)</kbd>
 
 
 4.  Review the **web** Partition
@@ -1657,7 +1645,7 @@ Lets get started\!
  
     During the code generation phase of Mono2Micro, the code generator  will generate a **Proxy** for the class to call the REST service  interface in partition0.
  
-    ![](./images/media/image81.png)
+    <kbd>![](./images/media/image81.png)</kbd>
 
 
 
@@ -1665,67 +1653,50 @@ Lets get started\!
 
 **Objectives**
 
-  - Learn how to use Mono2Micro tools to generate the bulk of the
-    foundation microservices code, while allowing the monolith Java
+  - Learn how to use Mono2Micro tools to generate the bulk of the foundation microservices code, while allowing the monolith Java
     classes to stay completely as-is.
 
 In Part 3 of the lab, you will:
 
-1.  Use the **code generator** to generate the microservices plumbing
-    code for the two microservices (front-end and back-end)
+1.  Use the **code generator** to generate the microservices plumbing code for the two microservices (front-end and back-end)
 
-2.  From the generated starter code, refactor the transformed
-    Microservices
+2.  From the generated starter code, refactor the transformed Microservices
     
-    a.  Move the static and non-Java artifacts from the monolith
-        application into the individual microservices
+    a.  Move the static and non-Java artifacts from the monolith application into the individual microservices
     
-    b.  Refactor the minimal set of artifacts so that the transformed
-        microservices will compile and run in OpenLiberty server in
+    b.  Refactor the minimal set of artifacts so that the transformed microservices will compile and run in OpenLiberty server in
         Docker containers.
 
-    ![](./images/media/image7.svg)
+    <kbd>![](./images/media/image7.svg)</kbd>
 
-After going through the partition recommendations generated by the AI
-engine, you can use Mono2Micro to automatically generate API services
+After going through the partition recommendations generated by the AI engine, you can use Mono2Micro to automatically generate API services
 and related code to realize the potential microservice recommendations.
 
 This is accomplished by executing the **code generator**.
 
-Code generator automatically performs three crucial tasks for the
-architects and developers in the
-
-refactoring endeavor of realizing partitions (partitions
-recommendations) as microservices.
+Code generator automatically performs three crucial tasks for the architects and developers in the refactoring endeavor of realizing partitions (partitions recommendations) as microservices.
 
 **The tasks performed by the code generator can be listed as follows:**
 
-  - It creates transformational wrappings to turn partition methods into
-    microservices APIs
+  - It creates transformational wrappings to turn partition methods into microservices APIs
 
-  - It provides an optimized distributed object management, garbage
-    collection, and remote local reference translations like the Java
+  - It provides an optimized distributed object management, garbage collection, and remote local reference translations like the Java
     remote method invocation mechanism.
 
-  - It provides pin-pointed guidance on what the developers should check
-    and manually readjust or tweak code in the generated partitions.
+  - It provides pin-pointed guidance on what the developers should check and manually readjust or tweak code in the generated partitions.
 
 
 ## 3.1 Run the code generator
 
-Now, let’s run the code generator to generate the plumbing code for the
-microservices.
+Now, let’s run the code generator to generate the plumbing code for the microservices.
 
-The code generator requires the following input artifacts and is
-referenced in the code generator command for proper execution:
+The code generator requires the following input artifacts and is referenced in the code generator command for proper execution:
 
-  - The parent folder of the **original DefaultApplication monolith**
-    application.
+  - The parent folder of the **original DefaultApplication monolith** application.
 
     > /home/ibmdemo/m2m-ws-sample/defaultapplication/monolith
 
-  - The **cardinal** folder from the mono2micro-user-modified directory
-    that was generated by the AI engine using the “**refine”** command.
+  - The **cardinal** folder from the mono2micro-user-modified directory that was generated by the AI engine using the “**refine”** command.
 
     > /home/ibmdemo/m2m-ws-sample/defaultapplication/mono2micro-analysis-custom/cardinal
 
@@ -1773,7 +1744,7 @@ referenced in the code generator command for proper execution:
 
     The output will be similar to this:
  
-    ![](./images/media/image83.png)
+    <kbd>![](./images/media/image83.png)</kbd>
  
     Note that as part of the partitions created with the Java files, the code generator also creates, for each partition:
 
@@ -1813,7 +1784,7 @@ summary and details of the Java source files that were generated.
 
     b.  Examine the **web partition** summary in the **CardinalFileSummary.txt** file
 
-    ![](./images/media/image84.png)
+    <kbd>![](./images/media/image84.png)</kbd>
  
     This section of the report shows the classes contained in the **web** partition. The report further denotes the types of classes  that are in  the partition.
 
@@ -1842,10 +1813,9 @@ summary and details of the Java source files that were generated.
     - **Utility** classes are created to handle the plumbing such as     serialization, exceptions, logging, and interfaces for the new     microservices.
 
 
-2.  Scroll down and examine the **partition0** **partition** summary in
-    the CardinalFileSummary.txt file
+2.  Scroll down and examine the **partition0** **partition** summary in the CardinalFileSummary.txt file
 
-    ![](./images/media/image85.png)
+    <kbd>![](./images/media/image85.png)</kbd>
  
     This section of the report shows the classes contained in the  **partition0** partition. The report further denotes the types of  classes that are in the partition.
 
@@ -2023,22 +1993,19 @@ functionality in each partition.
 
         gedit moveResourcesToPartitions.sh
 
-    a.  The script defines a bunch of variables referencing various
-    directories for copying files
+    a.  The script defines a bunch of variables referencing various directories for copying files
 
-    b.   The script uses sudo to change directory permissions to allow
-     write access to the partitions that mono2 micro generated
+    b.   The script uses sudo to change directory permissions to allow write access to the partitions that mono2 micro generated
 
-    ![](./images/media/image86.png)
+    <kbd>![](./images/media/image86.png)</kbd>
 
-    c.  The script copies non-java resources from the monolith application
-    to the (front-end) web partition
+    c.  The script copies non-java resources from the monolith application to the (front-end) web partition
 
-    ![](./images/media/image87.png)
+    <kbd>![](./images/media/image87.png)</kbd>
 
     d.  The script copies non-java resources from the monolith application to the (back-end) partition0 partition
 
-    ![](./images/media/image88.png)
+    <kbd>![](./images/media/image88.png)</kbd>
 
 2.  **Close** the editor
 
@@ -2055,10 +2022,8 @@ functionality in each partition.
 
         Note: That is a numeric zero in passw0rd
 
-4.  Use a graphical **File Explorer** ![](./images/media/image89.png) or
-    **Terminal** window to see the non-Java files now in each of the
-    partitions, and in the same directory structure as the original
-    monolith.
+4.  Use a graphical **File Explorer** <kbd>![](./images/media/image89.png)</kbd> or **Terminal** window to see the non-Java files now in each of the
+    partitions, and in the same directory structure as the original monolith.
     
     a.  Navigate to the following directories to explore the newly added **non-Java** resources. Refer to the shell script to see what exactly was copied.
 
@@ -2069,67 +2034,48 @@ functionality in each partition.
 
 ### **3.4.2 Refactor the original non-Java resources as required for the front-end and back-end partitions**
 
-At this point, every partition contains all the Java and non-Java files
-necessary for the application.
+At this point, every partition contains all the Java and non-Java files necessary for the application.
 
-Starting with that as a base, the next step is to pare down and
-incrementally reduce the content of all these files, ending up with just
+Starting with that as a base, the next step is to pare down and incrementally reduce the content of all these files, ending up with just
 the needed content in each partition to build and run the microservice.
 
-In this lab, you will focus only on the refactoring that is required for
-the partitions to compile and run in Docker containers. An iterative for
+In this lab, you will focus only on the refactoring that is required for the partitions to compile and run in Docker containers. An iterative for
 further paring down the content is beyond the scope of this lab.
 
-To simplify the refactoring activities for this lab, a shell script has
-been provided that performs the refactoring required such that each
-partition (microservice) will compile and run on their own Liberty
-Server in separate Docker containers.
+To simplify the refactoring activities for this lab, a shell script has been provided that performs the refactoring required such that each
+partition (microservice) will compile and run on their own Liberty Server in separate Docker containers.
 
 **The script performs the following tasks for the web partition:**
 
-  - Create a new **pom.xml** file to build the Cardinal Utility classes
-    generated by Mono2Micro
+  - Create a new **pom.xml** file to build the Cardinal Utility classes generated by Mono2Micro
 
-  - Updates the top level **pom.xml** file to include the Cardinal
-    Utilities module to be built with the app
+  - Updates the top level **pom.xml** file to include the Cardinal Utilities module to be built with the app
 
-  - Updates the DefaultWebApplication **pom.xml** file to remove Java
-    persistence dependency
+  - Updates the DefaultWebApplication **pom.xml** file to remove Java persistence dependency
 
-  - Update the DefaultApplication-ear **pom.xml** file to remove the
-    database config
+  - Update the DefaultApplication-ear **pom.xml** file to remove the database config
 
-  - Update the DefaultApplication-ear **pom.xml** file to add Dependency
-    for Cardinal Utility classes
+  - Update the DefaultApplication-ear **pom.xml** file to add Dependency for Cardinal Utility classes
 
-  - Update Liberty **server.xml** file to remove database / datasource
-    configuration
+  - Update Liberty **server.xml** file to remove database / datasource configuration
 
-  - Add a **dockerfile** to build the Microservice and Docker image
-    running on Liberty
+  - Add a **dockerfile** to build the Microservice and Docker image running on Liberty
 
 **The script performs the following tasks for the partition0 partition:**
 
-  - Create a new **pom.xml** file to build the Cardinal Utility classes
-    generated by Mono2Micro
+  - Create a new **pom.xml** file to build the Cardinal Utility classes generated by Mono2Micro
 
-  - Updates the top level **pom.xml** file to include the Cardinal
-    Utilities module to be built
+  - Updates the top level **pom.xml** file to include the Cardinal Utilities module to be built
 
-  - Updates the DefaultWebApplication **pom.xml** file to remove Java
-    persistence dependency
+  - Updates the DefaultWebApplication **pom.xml** file to remove Java persistence dependency
 
-  - Update the DefaultApplication-ear **pom.xml** file to remove the
-    database config
+  - Update the DefaultApplication-ear **pom.xml** file to remove the database config
 
-  - Update the DefaultApplication-ear **pom.xml** file to add Dependency
-    for Cardinal Utility classes
+  - Update the DefaultApplication-ear **pom.xml** file to add Dependency for Cardinal Utility classes
 
-  - Update and move the **JAXRSConfiguration.java** file to
-    DefaultWebApplication class path.
+  - Update and move the **JAXRSConfiguration.java** file to DefaultWebApplication class path.
     
-      - Update the package in the Java file to match source location in
-        the module.
+      - Update the package in the Java file to match source location in the module.
     
       - This Java file is generated by Mono2Micro
 
@@ -2137,16 +2083,13 @@ Server in separate Docker containers.
     
       - This Java file is generated by Mono2Micro.
     
-      - This works around a known issue with conflicting import
-        statements in the Java file
+      - This works around a known issue with conflicting import statements in the Java file
 
-  - Add a **dockerfile** to build the Microservice and Docker image
-    running on Liberty
+  - Add a **dockerfile** to build the Microservice and Docker image running on Liberty
 
     <br/>  
 
-1.  Run the **refactorPartitions.sh** shell script to perform the
-    partition refactoring
+1.  Run the **refactorPartitions.sh** shell script to perform the partition refactoring
 
         cd /home/ibmdemo/m2m-ws-sample/defaultapplication/scripts
 
@@ -2157,9 +2100,9 @@ Server in separate Docker containers.
 
         Note: That is a numeric zero in passw0rd
 
-    ![](./images/media/image90.png)
+    <kbd>![](./images/media/image90.png)</kbd>
  
-    ![](./images/media/image91.png)
+    <kbd>![](./images/media/image91.png)</kbd>
  
     In a production application, refactoring the resources within each  Microservice could take significant time.
  
@@ -2197,7 +2140,7 @@ Let’s create a multi-stage dockerfile for each partition:
 
         gedit /home/ibmdemo/m2m-ws-sample/defaultapplication/monolith-web/Dockerfile
 
-    ![](./images/media/image92.png)
+    <kbd>![](./images/media/image92.png)</kbd>
  
     **Build Image stage:**
 
@@ -2205,21 +2148,16 @@ Let’s create a multi-stage dockerfile for each partition:
 
     **Production Image stage:**
 
-    - Pulls the Universal base Image (UBI) of Open-Liberty Docker image
-    from Dockerhub. The Universal Base Image is the supported images
+    - Pulls the Universal base Image (UBI) of Open-Liberty Docker image from Dockerhub. The Universal Base Image is the supported images
     when deploying to RedHat OpenShift.
 
-    - Copy the EAR to the Liberty apps directory, where Liberty will
-    automatically start when the container is started.
+    - Copy the EAR to the Liberty apps directory, where Liberty will automatically start when the container is started.
 
-    - Copy the Liberty server configuration file to Liberty config
-    directory, which is used to configure the Liberty runtime.
+    - Copy the Liberty server configuration file to Liberty config directory, which is used to configure the Liberty runtime.
 
-    - As root user, curl is installed as a tool for helping to debug
-    connectivity between Docker containers. This is not required.
+    - As root user, curl is installed as a tool for helping to debug connectivity between Docker containers. This is not required.
 
-    - As root user, update the permissions on the shared resources folder
-    in Liberty
+    - As root user, update the permissions on the shared resources folder in Liberty
 
     **ENV Variables required by Mono2Micro**
  
@@ -2252,10 +2190,9 @@ Let’s create a multi-stage dockerfile for each partition:
 
      > Where \<NETWORKNAME\> is the name of the Docker network to  inspect
  
-    ![](./images/media/image93.png)
+    <kbd>![](./images/media/image93.png)</kbd>
 
-2.  Navigate to the **Dockerfile** in the **partition0 partition** to
-    view this update.
+2.  Navigate to the **Dockerfile** in the **partition0 partition** to view this update.
 
         gedit /home/ibmdemo/m2m-ws-sample/defaultapplication/monolith-partition0/Dockerfile
 
@@ -2267,40 +2204,31 @@ Let’s create a multi-stage dockerfile for each partition:
  
     In addition to the steps that were performed in the web partition, these additional steps are required for the partition0 Microservice  deployment.
 
-    - Copies the Derby DB zip file to the shared resources folder for
-    Liberty. The Maven build has a step to unzip the Database contents.
+    - Copies the Derby DB zip file to the shared resources folder for Liberty. The Maven build has a step to unzip the Database contents.
 
-    - Copies the Derby database JDBC library to Liberty’s shared resources
-    folder
+    - Copies the Derby database JDBC library to Liberty’s shared resources folder
 
     **Note:** The partition0 partition does not require any Mono2Micro ENV variables to be set since this partition does not make any REST API calls to other partitions.
  
-    ![](./images/media/image94.png)
+    <kbd>![](./images/media/image94.png)</kbd>
 
 ## 3.5 Build (Compile) the transformed Microservices using Maven
 
-In the previous sections of the lab, you used the Mono2Micro tools to
-transform the original monolith application into two microservices.
+In the previous sections of the lab, you used the Mono2Micro tools to transform the original monolith application into two microservices.
 
-Then, using the convenience scripts we provided, you started to refactor
-the microservices by moving the non-java resources and Liberty
+Then, using the convenience scripts we provided, you started to refactor the microservices by moving the non-java resources and Liberty
 configuration into the microservices projects.
 
-You further refactored the microservices by paring down the non-java
-configuration files, Liberty configuration, and Maven build artifacts to
-include only the configuration required to build and run each of the
-microservices in their own Liberty runtime in containers.
+You further refactored the microservices by paring down the non-java configuration files, Liberty configuration, and Maven build artifacts to
+include only the configuration required to build and run each of the microservices in their own Liberty runtime in containers.
 
-At this point, it would be a good idea to do a quick compilation of the
-microservices to see if there are any compilation or build errors. Then,
+At this point, it would be a good idea to do a quick compilation of the microservices to see if there are any compilation or build errors. Then,
 iterate on the refactoring of each microservice, as needed.
 
-Ideally, developers would do try doing a quick compilation of the
-generated code by using an IDE tailored to support Java EE and the
+Ideally, developers would do try doing a quick compilation of the generated code by using an IDE tailored to support Java EE and the
 application server.
 
-Using an IDE for development is beyond the scope of this lab. Instead,
-you will simply use Maven to test the compilations of the microservices
+Using an IDE for development is beyond the scope of this lab. Instead, you will simply use Maven to test the compilations of the microservices
 and observe any compilation errors.
 
 1.  Compile the **monolith-web** microservice via command line
@@ -2313,11 +2241,11 @@ and observe any compilation errors.
 
         mvn clean install
 
-    ![](./images/media/image95.png)
+    <kbd>![](./images/media/image95.png)</kbd>
 
 2.  Compile the **monolith-partition0** microservice via command line
     
-    a.   Change to the **monolith-partition0** directory, which         contains the top-level pom.xml for building the monolith-web         microservice
+    a.   Change to the **monolith-partition0** directory, which contains the top-level pom.xml for building the monolith-web microservice
 
         cd /home/ibmdemo/m2m-ws-sample/defaultapplication/monolith-partition0
 
@@ -2325,66 +2253,53 @@ and observe any compilation errors.
 
         mvn clean install
 
-    ![](./images/media/image96.png)
+    <kbd>![](./images/media/image96.png)</kbd>
 
-At this point in the lab. you are ready to build and run the
-DefaultApplication as microservices in containers using Docker. The
-microservices were transformed using Mono2Micro, using resources we
-provided in the Git Repo.
+At this point in the lab. you are ready to build and run the DefaultApplication as microservices in containers using Docker. The
+microservices were transformed using Mono2Micro, using resources we provided in the Git Repo.
 
 # **PART 4 (OPTIONAL) Build and run the Transformed Java Microservices Using Docker**
 
-The goal of this section is to let you build and deploy the transformed
-Microservices to Docker containers and see the working state of the
+The goal of this section is to let you build and deploy the transformed Microservices to Docker containers and see the working state of the
 transformation process yourself.
 
 **Objectives**
 
-  - See the transformed monolith application running as independent
-    microservices on OpenLiberty in separate Docker containers, before
+  - See the transformed monolith application running as independent microservices on OpenLiberty in separate Docker containers, before
     you use Mono2Micro to transform the monolith in this lab.
 
-  - Learn how to build and run the transformed microservices with Docker
-    and OpenLiberty
+  - Learn how to build and run the transformed microservices with Docker and OpenLiberty
 
 **The basic steps in this section of the lab include:**
 
-  - Using Docker, build the two transformed microservices for the
-    application
+  - Using Docker, build the two transformed microservices for the application
 
-  - Setup a local Docker Network for the local docker containers to
-    communicate
+  - Setup a local Docker Network for the local docker containers to communicate
 
-  - Start the docker containers and run the microservices based
-    application
+  - Start the docker containers and run the microservices based application
 
-  - View the microservices logs to see the communication and data
-    flowing between the services as you test the application from a web
+  - View the microservices logs to see the communication and data flowing between the services as you test the application from a web
     browser
 
 
 
-1.  Let’s do a basic review of the two **microservices** that form the
-    **DefaultApplication** used in this lab
+1.  Let’s do a basic review of the two **microservices** that form the **DefaultApplication** used in this lab
 
     First, notice that there are two services. Mono2Micro places these services into logical partitions.
 
-    - The “**web**” partition is the UI front-end microservice. It
-    includes the HTML, JSPs, and Servlets, all needed to run within the
+    - The “**web**” partition is the UI front-end microservice. It includes the HTML, JSPs, and Servlets, all needed to run within the
     same Web Container, according to JEE specifications.
 
-    - The “**partition0**” partition (which I should rename) is the
-    backend service for the **IncrementAction** service. It contains an
-    EJB and JPA component that is responsible for persisting the data to
-    the embedded Derby database used by the microservice.
+    - The “**partition0**” partition (which I should rename) is the backend service for the **IncrementAction** service. It contains an
+    EJB and JPA component that is responsible for persisting the data to the embedded Derby database used by the microservice.
 
-    ![](./images/media/image97.png)
+    <kbd>![](./images/media/image97.png)</kbd>
  
     Web partition (front-end microservice) invokes partition0 (back-end),  when the **HitCount Service** via **EJB** is executed by the user.
  
     What happens is the HitCount Servlet in the “**Web partition**”  invokes a Rest Service interface in “**partition0**” through a local  HitCount proxy, both generated by Mono2Micro as plumbing code for  invoking the RESTful Microservices.
  
-    ![](./images/media/image98.png)
+    <kbd>![](./images/media/image98.png)</kbd>
 
 2.  Create a **Docker Network** for the two containers to communicate
 
@@ -2396,7 +2311,7 @@ transformation process yourself.
 
         docker network list
 
-    ![](./images/media/image99.png)
+    <kbd>![](./images/media/image99.png)</kbd>
 
 
     |                                         |                                                                                                                                                                              |
@@ -2416,19 +2331,17 @@ transformation process yourself.
 
     The dockerfile performs these basic tasks:
 
-    - Uses the projects pom.xml file to do a Maven build, which produces
-    the deployable EAR.
+    - Uses the projects pom.xml file to do a Maven build, which produces the deployable EAR.
 
     - Copies the EAR file and OpenLiberty Server configuration file to the appropriate location in the Docker container for the microservice to start once the container is started.
 
-    ![](./images/media/image100.png)
+    <kbd>![](./images/media/image100.png)</kbd>
 
 4.  Start the **partition-web (front-end)** docker container
 
     Notice the command line options that are required for the microservice to run properly.
 
-    - The partition-web container needs to expose port 9095 for the
-    application to be invoked from a web browser. The OpenLiberty sever
+    - The partition-web container needs to expose port 9095 for the application to be invoked from a web browser. The OpenLiberty sever
     is configured to use HTTP port 9080 internally.
 
     - The container must be included in the **defaultappNetwork** that you defined earlier. The back-end microservice will also join this
@@ -2440,7 +2353,7 @@ transformation process yourself.
 
     **Note:** The application is exposed on port **9095** and running on port 9080 in the container.
 
-    ![](./images/media/image101.png)
+    <kbd>![](./images/media/image101.png)</kbd>
 
 5.  Build the **defaultapplication-partition0 (back-end)** container
 
@@ -2459,24 +2372,20 @@ transformation process yourself.
 
     **The dockerfile performs these basic tasks:**
 
-    - Uses the projects pom.xml file to do a Maven build, which produces
-    the deployable EAR.
+    - Uses the projects pom.xml file to do a Maven build, which produces the deployable EAR.
 
-    - Copies the EAR file and OpenLiberty Server configuration file to the
-    appropriate location in the Docker container for the microservice to
+    - Copies the EAR file and OpenLiberty Server configuration file to the appropriate location in the Docker container for the microservice to
     start once the container is started.
 
-    - Copies the Derby Database library and database files to the
-    container
+    - Copies the Derby Database library and database files to the container
 
-    ![](./images/media/image102.png)
+    <kbd>![](./images/media/image102.png)</kbd>
 
 6.  Start the **partition-partition0 (back-end)** docker container
 
     Notice the command line options that are required for the microservice to run properly.
 
-    - The partition-partition0 container exposes port 9096.This is only
-    necessary if we want to hit the Service interface directly while
+    - The partition-partition0 container exposes port 9096.This is only necessary if we want to hit the Service interface directly while
     testing.
 
     - The container must be included in the **defaultappNetwork** that you defined earlier.
@@ -2485,16 +2394,15 @@ transformation process yourself.
 
           docker ps | grep defaultapp-partition0
 
-    ![](./images/media/image103.png)
+    <kbd>![](./images/media/image103.png)</kbd>
  
     **Note:** The application is exposed on port **9096** and running on port 9080 in the container
 
-7.  Inspect Docker’s **defaultappNetwork** and ensure both microservices
-    are joined in the network
+7.  Inspect Docker’s **defaultappNetwork** and ensure both microservices are joined in the network
 
         docker inspect defaultappNetwork
 
-    ![](./images/media/image104.png)
+    <kbd>![](./images/media/image104.png)</kbd>
  
     The microservices are now running on separate OpenLiberty servers in the local Docker environment.
  
@@ -2503,15 +2411,12 @@ transformation process yourself.
 
 ## 4.1 (OPTIONAL) View the OpenLiberty Server logs for the microservices
 
-At this point, the microservices should be up and running inside of
- their respective docker containers.
+At this point, the microservices should be up and running inside of their respective docker containers.
  
-First, you will look at the OpenLiberty server logs for both
- microservices to ensure the server and application started
+First, you will look at the OpenLiberty server logs for both microservices to ensure the server and application started
  successfully.
 
-1.  View the server log in the **partition-web (front-end)** docker
-    container
+1.  View the server log in the **partition-web (front-end)** docker container
     
     a.  Open a new Terminal window
     
@@ -2521,11 +2426,10 @@ First, you will look at the OpenLiberty server logs for both
 
     You should see messages indicating the DefaultApplication and the  defaultServer have been successfully started and is running.
 
-    ![](./images/media/image105.png)
+    <kbd>![](./images/media/image105.png)</kbd>
 
 
-2.  View the server log in the **partition-partition0 (back-end)**
-    docker container
+2.  View the server log in the **partition-partition0 (back-end)** docker container
     
     a.  Open a new Terminal window
     
@@ -2535,7 +2439,7 @@ First, you will look at the OpenLiberty server logs for both
 
     You should see messages indicating the DefaultApplication and the  defaultServer have been successfully started and is running.
 
-    ![](./images/media/image106.png)
+    <kbd>![](./images/media/image106.png)</kbd>
 
 ## 4.2 Test the microservices from your local Docker environment
 
@@ -2546,10 +2450,9 @@ In this section, you will run the microservices based application,  using the va
 1.  Launch a web browser and go to
     [**http://localhost:9095/**](http://localhost:9095/)
 
-    ![](./images/media/image107.png)
+    <kbd>![](./images/media/image107.png)</kbd>
 
-2.  Invoke the “**Snoop Servlet**”, which is running in the
-    defaultapp-web (front-end) Microservice
+2.  Invoke the “**Snoop Servlet**”, which is running in the defaultapp-web (front-end) Microservice
 
     The Snoop Servlet requires authentication, as defined in the  OpenLiberty server configuration. The credentials to access the Snoop servlet is:
  
@@ -2557,14 +2460,13 @@ In this section, you will run the microservices based application,  using the va
  
     > Password: **change1me**
  
-    ![](./images/media/image108.png)
+    <kbd>![](./images/media/image108.png)</kbd>
  
-    ![](./images/media/image17.png)
+    <kbd>![](./images/media/image17.png)</kbd>
 
-3.  Click the Browser back button ![](./images/media/image109.png) to
-    return to the DefaultApplication main HTML page
+3.  Click the Browser back button <kbd>![](./images/media/image109.png)</kbd> to return to the DefaultApplication main HTML page
 
-    ![](./images/media/image110.png)
+    <kbd>![](./images/media/image110.png)</kbd>
  
     Next, you will run the **HitCount** service. The HitCount service can  be run using a variety of options that illustrate different mechanisms  of handling application state in JEE applications.
  
@@ -2581,28 +2483,23 @@ In this section, you will run the microservices based application,  using the va
 </tbody>
 </table>
 
-4.  Here is a brief introduction to the multiple methods of running the
-    HitCount Service
+4.  Here is a brief introduction to the multiple methods of running the HitCount Service
 
-    - As illustrated below, selecting any of these three (3) options from
-    the application UI, the HitCount service runs using the local Web
-    Container session / state and runs the defaultapp-web (front-end)
-    microservice.
+    - As illustrated below, selecting any of these three (3) options from the application UI, the HitCount service runs using the local Web
+    Container session / state and runs the defaultapp-web (front-end) microservice.
 
       -  Servlet instance variable
       -  Session state (create if necessary)
       - Existing session state only
 
-    - Selecting **the Enterprise Java Bean (JPA)** option from the
-    application, the Web front-end microservice calls out to the
+    - Selecting **the Enterprise Java Bean (JPA)** option from the application, the Web front-end microservice calls out to the
     back-end microservice.
 
       - Enterprise Java Bean (JPA)
  
-    It calls the IncrementAction REST service in the efaultapp-container0
- container. The REST endpoint invokes an EJB which uses JPA to persist  to the Derby database. Using this option also requires a selection for  **Transaction Type**.
+    It calls the IncrementAction REST service in the efaultapp-container0 container. The REST endpoint invokes an EJB which uses JPA to persist  to the Derby database. Using this option also requires a selection for  **Transaction Type**.
  
-    ![](./images/media/image18.png)
+    <kbd>![](./images/media/image18.png)</kbd>
 
 5.  Run the HitCount service, choosing each of the three options below.
 
@@ -2612,7 +2509,7 @@ In this section, you will run the microservices based application,  using the va
 
     You should see a message in the HTML page indicating the Hit Count value: An ERROR message is displayed in the event of an error.
 
-    ![](./images/media/image111.png)
+    <kbd>![](./images/media/image111.png)</kbd>
 
 <table>
 <tbody>
@@ -2626,12 +2523,10 @@ In this section, you will run the microservices based application,  using the va
 </tbody>
 </table>
 
-Since using any of these options above run ONLY in the defaultapp-web
-(front-end) container, you will not see anything of significance logged
+Since using any of these options above run ONLY in the defaultapp-web (front-end) container, you will not see anything of significance logged
 in the server log files. This is expected behavior.
 
-6.  Run the HitCount service, choosing the **Enterprise Java Bean
-    (JPA)** option:
+6.  Run the HitCount service, choosing the **Enterprise Java Bean (JPA)** option:
     
     a.  Invoke the HitCount service multiple times, selecting different options for “**Transaction Type**”
 
@@ -2646,11 +2541,11 @@ in the server log files. This is expected behavior.
         
     **Output from defaultapp-web container**
  
-    ![](./images/media/image112.png)
+    <kbd>![](./images/media/image112.png)</kbd>
  
     **Output from defaultapp-partition0 container**
  
-    ![](./images/media/image113.png)
+    <kbd>![](./images/media/image113.png)</kbd>
 
 
 8.  **Close** the Web Browser window
@@ -2661,32 +2556,24 @@ in the server log files. This is expected behavior.
  
     Now that you have seen the transformed application in action, it is  time to use Mono2Micro and perform the steps that produced the  transformed microservices.
 
-**That completes the end-to-end lab: Using Mono2Micro to transform a
-Java monolith application to Microservices.**
+**That completes the end-to-end lab: Using Mono2Micro to transform a Java monolith application to Microservices.**
 
 
 # **Conclusion**
 
-In this lab, you gained significant hands-on experience using Mono2Micro
-in a full end-to-end flow.
+In this lab, you gained significant hands-on experience using Mono2Micro in a full end-to-end flow.
 
-You started by building and running the final transformed microservices
-based application in Docker containers running on Liberty server.
+You started by building and running the final transformed microservices based application in Docker containers running on Liberty server.
 
-Then, you started from the beginning with a Java EE monolith
-application, using the AI-driven Mono2Micro tools to analyze it and
-recommend the different ways it can be partitioned for potential
-microservices.
+Then, you started from the beginning with a Java EE monolith application, using the AI-driven Mono2Micro tools to analyze it and
+recommend the different ways it can be partitioned for potential microservices.
 
-Using Mono2Micro’s workbench UI, you further customized the partitioning
-to suit our specific requirements.
+Using Mono2Micro’s workbench UI, you further customized the partitioning to suit our specific requirements.
 
-You then used the unique code generation tool to generate a bulk of the
-foundation microservices code, while allowing the monolith Java classes
+You then used the unique code generation tool to generate a bulk of the foundation microservices code, while allowing the monolith Java classes
 to stay completely as-is without any rewriting.
 
-And then with further manual refactoring of the non-Java aspects of the
-monolith, a set of microservices are deployed in containers that
+And then with further manual refactoring of the non-Java aspects of the monolith, a set of microservices are deployed in containers that
 provides the exact same functionality as the monolith application.
 
 # **APPENDIX A: Examine the Java Code generated by Mono2Micro**
@@ -2704,47 +2591,41 @@ provides the exact same functionality as the monolith application.
 2.  First, let’s look at the **UTILITY** classes in the **application**
     subdirectory of the monolith-web folder.
 
-    Notice the folder named “**application**”. This folder contains the
- **Utility** classes that handles the plumbing for the microservices.
- It has classes for handling serialization, exceptions, logging, etc.
- These classes are generated for ALL partitions.
+    Notice the folder named “**application**”. This folder contains the **Utility** classes that handles the plumbing for the microservices.
+ It has classes for handling serialization, exceptions, logging, etc. These classes are generated for ALL partitions.
  
-    ![](./images/media/image114.png)
+    <kbd>![](./images/media/image114.png)</kbd>
  
-    ![](./images/media/image115.png)
+    <kbd>![](./images/media/image115.png)</kbd>
  
-    **Tip:** The default name for the Utility classes is “application”.
- However, this is configurable in the **app\_config.txt** file that is
+    **Tip:** The default name for the Utility classes is “application”. However, this is configurable in the **app\_config.txt** file that is
  generated by the AI engine.
  
-    ![](./images/media/image116.png)
+    <kbd>![](./images/media/image116.png)</kbd>
  
     The **app\_config.txt** file is located here:
  
     > /home/ibmdemo/m2m-ws-sample/defaultapplication/mono2micro-analysis-custom/cardinal
 
-3.  Explore the **DefaultWebAplication** subdirectory in the
-    **monolith-web** folder.
+3.  Explore the **DefaultWebAplication** subdirectory in the **monolith-web** folder.
     
     a. **Original** classes: The original **HitCount**.java and
         > **SnoopServlet** classes are copied directly from the original
         > monolith application
 
-    ![](./images/media/image117.png)
+    <kbd>![](./images/media/image117.png)</kbd>
 
     b  **Proxy class:** The **code generator** generated a proxy class for **IncrementAction.** The proxy invokes the IncrementActionService URL in partition0.
 
-    ![](./images/media/image118.png)
+    <kbd>![](./images/media/image118.png)</kbd>
 
-    c. **Dummy classes:** The **code generator** generated Dummy classes
-     for classes that are present in the original monolith but are
-     moved to a different partition. The Dummy classes simply throw
-     custom exceptions in the event these classes are
+    c. **Dummy classes:** The **code generator** generated Dummy classes for classes that are present in the original monolith but are
+     moved to a different partition. The Dummy classes simply throw custom exceptions in the event these classes are
      unexpectedlyinvoked.
 
     Dummy classes for **Increment.java** and **IncrementSSB.java** were generated.
 
-    ![](./images/media/image119.png)
+    <kbd>![](./images/media/image119.png)</kbd>
 
 ## A.2 Explore some notable Java resources generated in the partition0 partition
 
@@ -2752,194 +2633,145 @@ provides the exact same functionality as the monolith application.
 > this lab. You will explore a few of the key resources in the
 > partitions. Feel free to explore in more detail if you desire.
 
-1.  Using the File Explorer, navigate to the **monolith-partition0**
-    directory
+1.  Using the File Explorer, navigate to the **monolith-partition0** directory
 
     > Home \> m2m-ws-sample \> defaultapplication \> monolith-partition0 |
 
-2.  The **UTILITY** classes in the **application** subdirectory of the
-    **monolith-partition0** partition are the same as those generated in
-    the web partition. These utility classes are required from each
-    microservice.
+2.  The **UTILITY** classes in the **application** subdirectory of the **monolith-partition0** partition are the same as those generated in
+    the web partition. These utility classes are required from each microservice.
 
-    Notice the folder named “**application**”. This folder contains the
- **Utility** classes that handles the plumbing for the microservices.
- It has classes for handling serialization, exceptions, logging, etc.
- These classes are generated for ALL partitions.
+    Notice the folder named “**application**”. This folder contains the **Utility** classes that handles the plumbing for the microservices.
+ It has classes for handling serialization, exceptions, logging, etc. These classes are generated for ALL partitions.
  
-    ![](./images/media/image120.png)
+    <kbd>![](./images/media/image120.png)</kbd>
  
-    ![](./images/media/image121.png)
+    <kbd>![](./images/media/image121.png)</kbd>
 
-3.  The **code generator** produced a Java resource named
-    **JAXRSConfiguration.java**. This file is in the “**config**”
-    sub-directory under the **application** subdirectory of the
-    monolith-partition0 partition.
+3.  The **code generator** produced a Java resource named **JAXRSConfiguration.java**. This file is in the “**config**”
+    sub-directory under the **application** subdirectory of the monolith-partition0 partition.
 
-    ![](./images/media/image122.png)
+    <kbd>![](./images/media/image122.png)</kbd>
  
-    As part of the utility code that the **code generator** produces, a
- **JAXRSConfiguration** class is generated per partition.
+    As part of the utility code that the **code generator** produces, a **JAXRSConfiguration** class is generated per partition.
  
-    For now, it is important to know this class sets up the JAX-RS config
- where all **service classes** are registered and is meant to be copied
- over and placed in one Java EE module of your preference within each
- partition.
+    For now, it is important to know this class sets up the JAX-RS config where all **service classes** are registered and is meant to be copied
+ over and placed in one Java EE module of your preference within each partition.
  
-    You will work with this file later in the lab as you do final
- preparation of the microservices for deployment to Liberty Servers in
+    You will work with this file later in the lab as you do final preparation of the microservices for deployment to Liberty Servers in
  Containers.
  
-    ![](./images/media/image123.png)
+    <kbd>![](./images/media/image123.png)</kbd>
  
     **user_defined.txt**
  
-    A related file that you might notice is the presence of a
- user_defined.txt file in
+    A related file that you might notice is the presence of a user_defined.txt file in
  /home/ibmdemo/m2m-ws-sample/defaultapplication/mono2micro-analysis-custom/cardinal
  which the **code generator** reads on start-up**, if one exists**.
  
-    This is a way to provide a list of one or more monolith classes that
- are to be treated as “external facing”, where classes outside its
- partition might call into it. These external facing classes are also
- called “service classes” in Mono2Micro nomenclature.
+    This is a way to provide a list of one or more monolith classes that are to be treated as “external facing”, where classes outside its
+ partition might call into it. These external facing classes are also called “service classes” in Mono2Micro nomenclature.
  
-    Recall that the deep partition analysis report Cardinal-Report.html
- generated by the AI engine lists all external facing classes per
- partition that the AI analysis deemed necessary… but there could
- always be cases where some classes were not called out as such
- (typically due to insufficient use cases being run that allows
- Mono2Micro to observe this external facing behavior).
+    Recall that the deep partition analysis report Cardinal-Report.html generated by the AI engine lists all external facing classes per
+ partition that the AI analysis deemed necessary… but there could always be cases where some classes were not called out as such
+ (typically due to insufficient use cases being run that allows Mono2Micro to observe this external facing behavior).
  
     The **user_defined.txt** file provides the ability to define  additional Java classes as external facing “service classes”, if  needed.
 
-4.  Explore the **DefaultWebApplication** subdirectory in the
-    **monolith-partition0** folder.
+4.  Explore the **DefaultWebApplication** subdirectory in the **monolith-partition0** folder.
     
-    a.  **Original** classes: The original classes are copied directly
-        from the original monolith application:
+    a.  **Original** classes: The original classes are copied directly from the original monolith application:
 
     - Increment.java
     - IncrementAction.java
     - IncrementSSB.java
 
-    ![](./images/media/image124.png)
+    <kbd>![](./images/media/image124.png)</kbd>
 
     b.   **Service class:** The **code generator** produced a Service class names **IncrementActionService.** The service class is the REST Service interface to the IncrementAction service.
 
-    ![](./images/media/image125.png)
+    <kbd>![](./images/media/image125.png)</kbd>
 
-    ![](./images/media/image126.png)
+    <kbd>![](./images/media/image126.png)</kbd>
 
-    c. **Dummy classes:** The **code generator** produced Dummy classes
-     for classes that are present in the original monolith but are
-     moved to a different partition. The Dummy classes simply throw
-     custom exceptions in the event these classes are
-     unexpectedlyinvoked.
+    c. **Dummy classes:** The **code generator** produced Dummy classes for classes that are present in the original monolith but are
+     moved to a different partition. The Dummy classes simply throw custom exceptions in the event these classes are unexpectedlyinvoked.
 
     Dummy classes for **HitCount.java** and **SnoopServlet.java** were  generated. 
 
-    ![](./images/media/image127.png)
+    <kbd>![](./images/media/image127.png)</kbd>
 
 
 # **Appendix B:** **Examine the Refactored resources after code generation** 
 
-In this appendix, you will explore a variety of refactored resources
-that are representative of the types of refactoring required from many
-Java application. We will not explore every refactored file. However.
-You may explore deeper, if desired.
+In this appendix, you will explore a variety of refactored resources that are representative of the types of refactoring required from many
+Java application. We will not explore every refactored file. However, you may explore deeper, if desired.
 
 ## B.1 Code Generator Utility Code Module
 
-Firstly, to build the generated utility code in each partition, It kept
-the generated application/ folder, but could have chosen to rename it to
-something like to cardinal-utils/ to better identify the modules
-purpose.
+Firstly, to build the generated utility code in each partition, It kept the generated application/ folder, but could have chosen to rename it to
+something like to cardinal-utils/ to better identify the modules purpose.
 
-Then, It can be put together a pom.xml fashioned after the monolith’s
-web module’s pom files, to build it as a utility .jar (with the aim of
+Then, It can be put together a pom.xml fashioned after the monolith’s web module’s pom files, to build it as a utility .jar (with the aim of
 then including it as an additional module in the partition .ear file):
 
-1.  Navigate to the new “Utilities” **pom.xml** file to view its
-    contents in the web partition. This file was created in ALL
-    partitions.
+1.  Navigate to the new “Utilities” **pom.xml** file to view its contents in the web partition. This file was created in ALL partitions.
 
         gedit /home/ibmdemo/m2m-ws-sample/defaultapplication/monolith-web/application/pom.xml
 
-    This pom.xml file will build a **Utilities jar** file and be included
- in the partition. The top level pom.xml file was also refactored to
- include this module for Maven to build
- 
-    ![](./images/media/image128.png)
+    This pom.xml file will build a **Utilities jar** file and be included in the partition. The top level pom.xml file was also refactored to
+ include this module for Maven to build 
+    <kbd>![](./images/media/image128.png)</kbd>
 
 
 ## B.2 Partitions Build Config
 
-Next, for each partition, the root pom.xml that was copied from the
-monolith was modified to include the new cardinal-utils module.
+Next, for each partition, the root pom.xml that was copied from the monolith was modified to include the new cardinal-utils module.
 
-1.  Navigate to the top-level **pom.xml** file in the **web partition**
-    to view this update. This update was made to all the top-level
+1.  Navigate to the top-level **pom.xml** file in the **web partition** to view this update. This update was made to all the top-level
     pom.xml in each partition.
 
         gedit /home/ibmdemo/m2m-ws-sample/defaultapplication/monolith-web/pom.xml
 
-    The included module to build the Utilities must match the
- “**artifactID**” in the Utils **pom.xml** that you explored above.
+    The included module to build the Utilities must match the “**artifactID**” in the Utils **pom.xml** that you explored above.
  
-     In this case, it is “**application**”. It might have been better to
- rename the module to something like cardinal-utils. But that could be
+     In this case, it is “**application**”. It might have been better to rename the module to something like cardinal-utils. But that could be
  done in another round of refactoring.
  
-    ![](./images/media/image129.png)
+    <kbd>![](./images/media/image129.png)</kbd>
 
 ## B.3 JAX-RS Configuration
 
-Next look at how to facilitate the JAX-RS code generated by Mono2Micro
-as these partitions are run on the app server.
+Next look at how to facilitate the JAX-RS code generated by Mono2Micro as these partitions are run on the app server.
 
-First, as part of the utility code that the **code generator** produces,
-a **JAXRSConfiguration** class is generated for each partition that has
-one or more service classes. A service class is class generated by the
-code generator that handle incoming REST API calls from outside of the
+First, as part of the utility code that the **code generator** produces, a **JAXRSConfiguration** class is generated for each partition that has
+one or more service classes. A service class is class generated by the code generator that handle incoming REST API calls from outside of the
 partition.
 
-This JAXRSConfiguration class sets up the JAX-RS config where all
-service classes are registered and is meant to be copied over and placed
-in one Java EE module of your preference within each partition so that
-it is in the server’s class path.
+This JAXRSConfiguration class sets up the JAX-RS config where all service classes are registered and is meant to be copied over and placed
+in one Java EE module of your preference within each partition so that it is in the server’s class path.
 
-For this DefaultApplication example, partition0 partition is the only
-partition that has a service class. I chose to place the java file in
-the web module in partitton0, in the same source location as the
-IncrementActionService class.
+For this DefaultApplication example, partition0 partition is the only partition that has a service class. I chose to place the java file in
+the web module in partitton0, in the same source location as the IncrementActionService class.
 
-1.  Navigate to the **JAXRSConfiguration** java file in the
-    **partition0** **partition** to view this update.
+1.  Navigate to the **JAXRSConfiguration** java file in the **partition0** **partition** to view this update.
 
         gedit /home/ibmdemo/m2m-ws-sample/defaultapplication/monolith-partition0/DefaultWebApplication/src/main/java/com/ibm/defaultapplication/JAXRSConfiguration.java
 
-    You must specify the package for the class based on where you place
- the file in the project.
+    You must specify the package for the class based on where you place the file in the project.
  
-    Notice that this class registered the IncrementActionService class
- that code generator produced.
+    Notice that this class registered the IncrementActionService class that code generator produced.
  
-    ![](./images/media/image130.png)
+    <kbd>![](./images/media/image130.png)</kbd>
 
 ## B.4 Application Server Config Per Partition
 
-For this DefaultApplication example, the Liberty server config
-(server.xml) that originally came in the monolith was copied to each
+For this DefaultApplication example, the Liberty server config (server.xml) that originally came in the monolith was copied to each
 partitions ear module.
 
-  - The contents of the monolith’s server.xml were “as-is” for parttion0
-    partition.
-  - The Datasource configuration was removed from the server.xml in the
-    web partition
+  - The contents of the monolith’s server.xml were “as-is” for parttion0 partition.
+  - The Datasource configuration was removed from the server.xml in the web partition
   
-Usually, the Liberty **server.xml** can be further customized and
-reduced to pull in only applicable server features to each partition.
+Usually, the Liberty **server.xml** can be further customized and reduced to pull in only applicable server features to each partition.
 
 <table>
 <tbody>
@@ -2952,41 +2784,34 @@ reduced to pull in only applicable server features to each partition.
 </tbody>
 </table>
 
-Additionally, each partition’s server.xml also needs to add **JAX-RS**
-related features if they already don’t exist, to facilitate the
+Additionally, each partition’s server.xml also needs to add **JAX-RS** related features if they already don’t exist, to facilitate the
 generated code’s JAX-RS webservice service and client code:
 
     \<feature\>jaxrs-2.0\</feature\>
     \<feature\>mpConfig-1.2\</feature\>
     \<feature\>mpOpenAPI-1.0\</feature\>
 
-1.  Navigate to the server.xml file in the **web** **partition** to view
-    this update.
+1.  Navigate to the server.xml file in the **web** **partition** to view this update.
 
         gedit /home/ibmdemo/m2m-ws-sample/defaultapplication/monolith-web/DefaultApplication-ear/src/main/liberty/config/server.xml
 
-    ![](./images/media/image131.png)
+    <kbd>![](./images/media/image131.png)</kbd>
 
 # **Appendix C:** **How can I do this lab using my own environment**? 
 
-It is possible to do this lab using your own environment instead of the
-Skytap environment provided.
+It is possible to do this lab using your own environment instead of the hosted environment provided.
 
-**NOTE**: The **prerequisite software** listed in the prerequisites
-section of the lab MUST be installed on your local environment.
+**NOTE**: The **prerequisite software** listed in the prerequisites section of the lab MUST be installed on your local environment.
 
-There were only 3 changes that we had to do, in addition to the
-obviously issuing commands using my own path instead of /home/ibmdemo:
+There were only 3 changes that we had to do, in addition to the obviously issuing commands using my own path instead of /home/ibmdemo:
 
  
 
 ## Section \# 2.3 - Run test cases using the instrumented monolith for Runtime data analysis
 
   - Edit the scripts
-    **m2m-ws-sample/defaultapplication/scripts/startServer.sh** and
-    **m2m-ws-sample/defaultapplication/scripts/serverStatus.sh** to
-    adjust the path to your own environment
-
+    **m2m-ws-sample/defaultapplication/scripts/startServer.sh** and **m2m-ws-sample/defaultapplication/scripts/serverStatus.sh** to
+    adjust the path to your own environment 
 > **OR** run the commands manually
 > 
 > $LAB\_HOME/m2m-ws-sample/defaultapplication/monolith/DefaultApplication-ear/target/liberty/wlp/bin/server
@@ -2999,8 +2824,7 @@ obviously issuing commands using my own path instead of /home/ibmdemo:
 
 ## Section \# 3.4.1 - Move the original non-Java resources from the monolith to the two new partitions
 
-  - Edit **moveResourcesToPartitions.sh** to adjust the path to your own
-    environment, here: WORKDIR="$LAB\_HOME/m2m-ws-sample")
+  - Edit **moveResourcesToPartitions.sh** to adjust the path to your own environment, here: WORKDIR="$LAB\_HOME/m2m-ws-sample")
 
  
 
@@ -3013,10 +2837,8 @@ obviously issuing commands using my own path instead of /home/ibmdemo:
 
 **How to use Copy / Paste between local desktop and Skytap VM?***
 
-Using copy / Paste capabilities between the lab document (PDF) on your
- local workstation to the VM is a good approach to work through a lab
- more efficiently, while reducing the typing errors that often occur
- when manually entering data.
+Using copy / Paste capabilities between the lab document (PDF) on your local workstation to the VM is a good approach to work through a lab
+ more efficiently, while reducing the typing errors that often occur when manually entering data.
 
 1.  In SkyTap, you will find that any text copied to the clipboard on
     your local workstation is not available to be pasted into the VM on
@@ -3029,25 +2851,20 @@ Using copy / Paste capabilities between the lab document (PDF) on your
     b.   Return to the SkyTap environment and click on the Clipboard at
          the top of the SkyTap session window.
 
-    ![](./images/media/image132.png)
+    <kbd>![](./images/media/image132.png)</kbd>
 
-    c.   Use **CTRL-V** to paste the content into the Copy/paste VM
-     clipboard. Or use the **paste** menu item that is available in the
+    c.   Use **CTRL-V** to paste the content into the Copy/paste VM clipboard. Or use the **paste** menu item that is available in the
      dialog, when you right mouse click in the clipboard text area.
 
-    ![](./images/media/image133.png)
+    <kbd>![](./images/media/image133.png)</kbd>
 
-    d.  Once the text is pasted, just navigate away to the VM window where
-     you want to paste the content. Then, use **CTRL-C**, or right
+    d.  Once the text is pasted, just navigate away to the VM window where you want to paste the content. Then, use **CTRL-C**, or right
      mouse click & us the **paste menu item** to paste the content.
 
-    ![](./images/media/image134.png)
+    <kbd>![](./images/media/image134.png)</kbd>
 
     e.  The text is pasted into the VM
+    <kbd>![](./images/media/image135.png)</kbd>
 
-    ![](./images/media/image135.png)
-
-    **Note:** The very first time you do this, if the text does not paste,
-you may have to paste the contents into the Skytap clipboard twice. This
-is a known Skytap issue. It only happens on the 1<sup>st</sup> attempt
-to copy / paste into Skytap.
+    **Note:** The very first time you do this, if the text does not paste, you may have to paste the contents into the Skytap clipboard twice. This
+is a known Skytap issue. It only happens on the 1<sup>st</sup> attempt to copy / paste into Skytap.
