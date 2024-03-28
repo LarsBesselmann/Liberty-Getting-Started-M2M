@@ -1201,7 +1201,7 @@ Tweaking the business logic recommendations is straight forward using the UI, an
 
     b.  The **HitCount** class is now located in the web partition.
 
-    <kbd>![](./images/media/image58_b.png)</kbd>
+    <kbd>![](./images/media/image69_b.png)</kbd>
 
 6.  Click on the “**Save partitions**” button to save the updated custom view. The customized **final\_graph.json** file is saved to the
     **“/home/techzone/Student/Downloads”** folder.
