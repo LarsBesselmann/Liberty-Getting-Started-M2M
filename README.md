@@ -571,7 +571,7 @@ You will configure the Liberty server to load the Binary instrumenter (minerva-a
 
     <kbd>![mono2micro-agent-configuration](./images/media/mono2micro-agent-configuration.png)</kbd>
 
-2.  Run the scripts below to Start the Liberty server and check that the server is in the running state
+2.  Run the commands below to Start the Liberty server and check that the server is in the running state
 
         cd /home/techzone/Student/m2m-ws-sample/defaultapplication/monolith/DefaultApplication-ear/target
 
@@ -748,7 +748,7 @@ running that scenario on the monolith.
     <kbd>![mono2micro-usecase-done.png](./images/media/mono2micro-usecase-done.png)</kbd>
 
 
-4.  Run the script below to **Stop** the Liberty server
+4.  Run the commands below to **Stop** the Liberty server
 
         cd /home/techzone/Student/m2m-ws-sample/defaultapplication/monolith/DefaultApplication-ear/target
         
