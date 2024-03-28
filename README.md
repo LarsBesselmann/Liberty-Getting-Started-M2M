@@ -1203,35 +1203,28 @@ Tweaking the business logic recommendations is straight forward using the UI, an
 
     <kbd>![](./images/media/image69_b.png)</kbd>
 
-6.  Click on the “**Save partitions**” button to save the updated custom view. The customized **final\_graph.json** file is saved to the
-    **“/home/techzone/Student/Downloads”** folder.
+6.  Click on the “**Save partitions**” button to save the updated custom view. Accept the defaults. The customized **final\_graph.json** file is saved to the **“/home/techzone/Downloads”** folder.
 
     <kbd>![](./images/media/image70.png)</kbd>
 
 
 ### **2.7.2 Regenerate the partition recommendations by rerunning the AI engine against the customized graph**
 
-To generate the new microservice recommendations and the relevant
-reports for a modified graph you must execute the AI engine with the
+To generate the new microservice recommendations and the relevant reports for a modified graph you must execute the AI engine with the
 refine command.
 
-Additionally, the AI engine must reference the customized version of the
-final\_graph.json file. To prepare to run the AI engine again, you must
+Additionally, the AI engine must reference the customized version of the final\_graph.json file. To prepare to run the AI engine again, you must
 first do a couple of manual steps:
 
-  - Move the customized final\_graph.json file from “**Downloads”**
-    folder to a known location by Mono2Micro.
+  - Move the customized final\_graph.json file from “**Downloads”** folder to a known location by Mono2Micro.
 
-  - Rename the customized “**final\_graph.json”** file to a name that
-    makes it obvious this is our customized graph and not the original
+  - Rename the customized “**final\_graph.json”** file to a name that makes it obvious this is our customized graph and not the original
 
-  - Modify the Mono2Micro “**config.ini**” file to reference the name
-    and location of the customized graph file.
+  - Modify the Mono2Micro “**config.ini**” file to reference the name and location of the customized graph file.
 
 Lets get started\!
 
-1.  Copy the customized **final_graph.json** file from users
-    “Downloads” folder to a known location by Mono2Micro’s AI
+1.  Copy the customized **final_graph.json** file from users “Downloads” folder to a known location by Mono2Micro’s AI
     engine, and name it as **custom_graph.json**
 
      By default, the AI engine will look in the root directory of the  **application-data** folder where the contexts, logs, and tables are  located.
@@ -1242,7 +1235,7 @@ Lets get started\!
 
     a.  Run the following commands to copy the file, change to the target directory, and list the files and ensure the **`custom_graph.json`** has been copied to the desired directory
 
-        cp /home/techzone/Student/Downloads/final_graph.json /home/techzone/Student/m2m-ws-sample/defaultapplication/application-data/custom_graph.json
+        cp /home/techzone/Downloads/final_graph.json /home/techzone/Student/m2m-ws-sample/defaultapplication/application-data/custom_graph.json
 
         cd /home/techzone/Student/m2m-ws-sample/defaultapplication/application-data
 
