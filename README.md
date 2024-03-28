@@ -691,23 +691,15 @@ running that scenario on the monolith.
     > Password: **change1me** (that is the number 1 in the password).
     > 
     <kbd>![](./images/media/image33b.png)</kbd>
+    Don't save the password.
 
     d.  Run snoop multiple times: Just click the Browsers “Reload Page” <kbd>![](./images/media/image34.png)</kbd> button.
 
     e. When finished, click on the Browsers “**back**” button <kbd>![](./images/media/image35.png)</kbd> to return to the applications main   > HTML page.
 
-    f.  In the **use case recorder**, enter **`9`**, to stop the stopwatch for the test case
+    f.  Switch back to the terminal window. In the **use case recorder**, enter **`9`**, to stop the stopwatch for the test case
+    <kbd>![mono2micro-snoop-done.png](./images/media/mono2micro-snoop-done.png)</kbd>
 
-        A filename is not specified. Creating a default file: "context_1681760275797.json".
-        Enter <Label> to start recording current context or enter 1 to exit.
-        snoop
-        Enter 9 to stop the recording of the current context.
-        9
-        LABEL                         START               STOP                
-        snoop                         1681760361067       1681760473074       
-        Enter <Label> to start recording current context or enter 1 to exit.
-
- 
     Notice the **use case recorder** has recorded the **START** and **STOP** times for the “snoop” test case. These timestamps correspond with the timestamps in the Liberty log file, from the instrumented version of the DefaultApplication running in Liberty.
 
 3.  Run the **Hit Count** test case
