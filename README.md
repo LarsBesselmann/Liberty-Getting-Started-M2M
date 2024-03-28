@@ -320,10 +320,9 @@ The GitHub repo includes all the artifacts needed to complete this lab on your l
 
     <kbd>![](./images/media/image19.png)</kbd>
 
-2.  Change to the workshop directory that contains the cloned repository
-    artifacts. Then list the directory contents.
+2.  Change to the workshop directory that contains the cloned repository artifacts. Then list the directory contents.
 
-        cd /home/ibmdemo/m2m-ws-sample
+        cd m2m-ws-sample
 
         ls -l
 
