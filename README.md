@@ -706,7 +706,8 @@ running that scenario on the monolith.
 
     Running the Hit Count test case requires the same basic step as Snoop, but has a few more options to test in the application:
 
-    a.  In the **use case recorder**, provide the label named **`hitcount`** which will start the stopwatch for the snoop test case.
+    a.  In the **use case recorder**, provide the label named **`hitcount`** which will start the stopwatch for the hitcount test case.
+
     <kbd>![mono2micro-hitcount.png](./images/media/mono2micro-hitcount.png)</kbd>
 
     b. From the Web Browser, click on the **Hit Count** link in the DefaultApplication HTML page.
