@@ -707,18 +707,7 @@ running that scenario on the monolith.
     Running the Hit Count test case requires the same basic step as Snoop, but has a few more options to test in the application:
 
     a.  In the **use case recorder**, provide the label named **`hitcount`** which will start the stopwatch for the snoop test case.
-
-        A filename is not specified. Creating a default file: "context_1681760275797.json".
-        Enter <Label> to start recording current context or enter 1 to exit.
-        snoop
-        Enter 9 to stop the recording of the current context.
-        9
-        LABEL                         START               STOP                
-        snoop                         1681760361067       1681760473074       
-        Enter <Label> to start recording current context or enter 1 to exit.
-        hitcount
-        Enter 9 to stop the recording of the current context.
-
+    <kbd>![mono2micro-hitcount.png](./images/media/mono2micro-hitcount.png)</kbd>
 
     b. From the Web Browser, click on the **Hit Count** link in the DefaultApplication HTML page.
 
@@ -748,6 +737,7 @@ running that scenario on the monolith.
     “**Transaction Type**” options.
 
     f. In the **use case recorder**, enter **`9`**, to stop the **use case recorder** stopwatch for the test case
+    <kbd>![mono2micro-hitcount-done.png](./images/media/mono2micro-hitcount-done.png)</kbd>
 
     The **use case recorder** has now captured the START and STOP timestamps for the use cases, which corresponds to the timestamps  recorded in the Liberty log file from the  instrumented version of the DefaultApplication.
  
