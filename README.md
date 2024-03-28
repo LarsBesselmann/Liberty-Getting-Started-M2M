@@ -1173,7 +1173,11 @@ Tweaking the business logic recommendations is straight forward using the UI, an
 
     <kbd>![](./images/media/image63.png)</kbd>
 
-    b. After that, the details section will open. Then, click on the  pencil icon ![Icon Description automatically generated](./images/media/image64.png) to rename the partition.
+    The details section will open. You might have to move **partition1** to make it visible again.
+
+    <kbd>![](./images/media/image63b.png)</kbd>
+
+    b. Click on the pencil icon ![Icon Description automatically generated](./images/media/image64.png) to rename the partition.
 
     <kbd>![](./images/media/image65.png)</kbd>
 
