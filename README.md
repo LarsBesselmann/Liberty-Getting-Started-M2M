@@ -419,9 +419,9 @@ Let’s begin with the build of the .ear file and then the static data collectio
 
 1.  Build the original version of the DefaultApplication
 
-    Adjust the sample package to use the IBM SemeruJava 8 SDK for Liberty.
+    Adjust the sample package to use the IBM Semeru Java 8 SDK for Liberty.
 
-        echo "JAVA_HOME=~/jdk8u402-b06/jre" > /home/techzone/Student/m2m-ws-sample/defaultapplication/monolith/DefaultApplication-ear/src/main/liberty/config/server.env
+        echo "JAVA_HOME=/home/techzone/jdk8u402-b06/jre" > /home/techzone/Student/m2m-ws-sample/defaultapplication/monolith/DefaultApplication-ear/src/main/liberty/config/server.env
 
 
     Change to the directory location of the application code, and run the maven build.
