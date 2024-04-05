@@ -141,7 +141,7 @@ If you are doing this lab as part of an instructor led workshop (virtual or face
 
 Otherwise, you will need to reserve an environment for the lab. You can obtain one here. Follow the on-screen instructions for the “**Reserve now**” option.
 
-<https://techzone.ibm.com/my/reservations/create/6389feba71c87d001831c119>
+<https://techzone.ibm.com/collection/libery-getting-started-labs>
 
 
 
